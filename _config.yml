@@ -18,7 +18,7 @@ teaser                   :  # filename of teaser fallback teaser image placed in
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.fr/citations?user=ZiBNjcsAAAAJ&hl=en"
-  email            :
+  email            : "florian.blanc@isa-lyon.fr"
   researchgate     : "https://www.researchgate.net/profile/Florian-Blanc-2"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/florian-e-c-blanc-phd-57547a90"
   orcid            : "https://orcid.org/0000-0002-0762-0478"
   pinterest        :
   soundcloud       :
@@ -182,10 +182,10 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  gallery:
+  datasets:
     output: true
     permalink: /:collection/:path/
-  talks:
+  gallery:
     output: true
     permalink: /:collection/:path/
   open-positions:
@@ -256,6 +256,15 @@ defaults:
       layout: single
       author_profile: true
       share: true
+ # _datasets
+  - scope:
+      path: ""
+      type: datasets
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
 
 # Sass/SCSS
 sass:

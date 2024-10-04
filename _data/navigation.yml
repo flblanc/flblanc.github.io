@@ -1,8 +1,11 @@
 # main links links
 main:
   - title: "Publications"
-    url: /publications/  
-
+    url: /publications/ 
+     
+  - title: "Datasets"
+    url: /datasets/ 
+    
   - title: "Teaching"
     url: /teaching/    
     
