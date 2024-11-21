@@ -13,14 +13,16 @@ I am a **CNRS Research Scientist** in the [**Biophysics of Complex Systems**](ht
 
 My research falls under **computational molecular biophysics**, **physical chemistry**, and **integrative structural biology**.
 
-
 I strive to understand how **biomolecular function** emerges from **structural dynamics** by describing the **atomically-detailed mechanisms** involved. 
 For this, I combine **molecular dynamics simulations**, **machine learning**, and **experimental biophysics**. 
 
+I investigate **complex molecular mechanisms** in systems ranging from short peptides to large **molecular motors** (myosin, ATP synthase), with the occasional venture into **supra-molecular chemistry**. I also contributed to characterizing the conformational dynamics and 
+immunogenic sites of the **SARS-CoV-2 spike protein** in the early days of the Covid-19 pandemic. More recently, I started to explore how to apply **deep learning** method to the analysis of **biophysical experiments**. 
+I am always looking for motivated students to work with,
+so check out the [open positions](/open-positions/) or contact me directly at `florian.blanc_at_isa-lyon.fr`.
 
-Leaning on my expertise in **free energy calculations**, I have elucidated **complex molecular mechanisms** in systems ranging from short peptides to large **molecular motors** (myosin, ATP synthase). I also contributed to early characterizations of the conformational dynamics and 
-immunogenic sites of the **SARS-CoV-2 spike protein**. 
 
 
-I am now interested in **pushing the frontiers** of integrative structural biophysics with machine learning. 
+
+
 
