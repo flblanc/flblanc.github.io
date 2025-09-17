@@ -12,4 +12,4 @@ citation: 'Blanc, Florian E. C. and Hologne, Maggy and Demontrond, M{\'e}lodie a
 
 [Link](https://doi.org/10.26434/chemrxiv-2025-pfwmz-v2)
 
-We use a custom bonded model and replica-exchange simulations to look at how Ag+ binding promotes the folding of an 11-residue peptide into an {$\alpha$}-helix. There is even some NMR in there.
+We use a custom bonded model and replica-exchange simulations to look at how Ag+ binding promotes the folding of an 11-residue peptide into an {$\alpha$}-helix. We train an autoencoder to map the folding landscape. There is even some NMR in there.
