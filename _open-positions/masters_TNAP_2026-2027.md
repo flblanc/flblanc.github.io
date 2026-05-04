@@ -16,7 +16,7 @@ date: 2026-05-04
 | Contact | Dr Florian Blanc (florian.blanc_at_cnrs.fr), Dr. Guillaume Hoffmann (guillaume.hoffmann_at_univ-lyon1.fr), Prof. Christophe Morell (christophe.morell_at_univ-lyon1.fr) |
 
 
-Download this internship offer [here](files/TNAP-Master2-2026.pdf). Interested candidates are invited to send a CV and a 1-page cover letter outlining their motivation, relevant skills, and research interests, to Florian Blanc, Guillaume Hoffmann and Christophe Morell. 
+Download this internship offer [here](/files/TNAP-Master2-2026.pdf). Interested candidates are invited to send a CV and a 1-page cover letter outlining their motivation, relevant skills, and research interests, to Florian Blanc, Guillaume Hoffmann and Christophe Morell. 
 
 
 
