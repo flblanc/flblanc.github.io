@@ -1,0 +1,27 @@
+<div class="publication-card">
+  <div class="publication-image">
+    <a href="{{ page.paperurl }}">
+      <img src="/images/publications/{{ page.permalink | split: '/' | last }}.png"
+           alt="Thumbnail for {{ page.title }}"
+           style="width: 100px; height: auto; border-radius: 4px;">
+    </a>
+  </div>
+  <div class="publication-content">
+    <h3>
+      <a href="{{ page.paperurl }}">{{ page.title }}</a>
+    </h3>
+    <p>
+      <em>{{ page.venue }}, {{ page.date | date: "%Y" }}</em>
+    </p>
+    <p>{{ content | strip_html | truncatewords: 30 }}</p>
+    <p><strong>Authors:</strong> {{ page.citation | replace: '<b>', '' | replace: '</b>', '' | replace: '<i>', '' | replace: '</i>', '' }}</p>
+    <p>
+      <a href="{{ page.doi }}">DOI</a>
+      {% if page.paperurl != page.doi %}
+        | <a href="{{ page.paperurl }}">PDF</a>
+      {% endif %}
+    </p>
+  </div>
+</div>
+
+

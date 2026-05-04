@@ -1,0 +1,52 @@
+.publication-card {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.publication-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.publication-image {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.publication-image img {
+  border: 1px solid #ddd;
+}
+
+.publication-content {
+  flex-grow: 1;
+}
+
+.publication-content h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.publication-content a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.publication-content a:hover {
+  text-decoration: underline;
+}
+
+.publication-content p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+
+
