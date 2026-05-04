@@ -21,7 +21,7 @@ immunogenic sites of the **SARS-CoV-2 spike protein** in the early days of the C
 
 
 I am always looking for motivated students to work with,
-so check out the [open positions](/open-positions/) or contact me directly at `florian.blanc_at_isa-lyon.fr`.
+so check out the [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;com">florian.blanc [at] cnrs [dot] com</a>.
 
 
 

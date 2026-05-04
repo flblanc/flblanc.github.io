@@ -16,7 +16,7 @@ date: 2026-05-04
 | Contact | Dr Florian Blanc (florian.blanc_at_cnrs.fr), Dr. Guillaume Hoffmann (guillaume.hoffmann_at_univ-lyon1.fr), Prof. Christophe Morell (christophe.morell_at_univ-lyon1.fr) |
 
 
-Download this internship offer [here](/files/TNAP-Master2-2026.pdf). Interested candidates are invited to submit a CV and a 1-page cover letter outlining their motivation, relevant skills, and research interests, to Florian Blanc, Guillaume Hoffmann and Christophe Morell at the e-mail addresses given above. 
+Download this internship offer [here](/assets/files/TNAP-Master2-2026.pdf). Interested candidates are invited to send a CV and a 1-page cover letter outlining their motivation, relevant skills, and research interests, to Florian Blanc, Guillaume Hoffmann and Christophe Morell. 
 
 
 
@@ -29,7 +29,7 @@ Key questions remain unanswered about TNAP's catalytic mechanism:
 - How do small pH changes result in large changes in enzymatic activity? 
 - What is the atomic-level mechanism of phosphate cleavage? 
 
-<img src="/images/TNAP_ATP.png" alt="TNAP_ATP" width="600" />
+<img src="/assets/images/TNAP_ATP.png" alt="TNAP_ATP" width="600" />
 
 ## Project
 Our experimental collaborators have recently solved **high-resolution structures** of TNAP bound to several substrates, putting us in an ideal position to investigate the enzymatic activity of TNAP at atomic resolution. This Master's project will integrate classical **Molecular Dynamics 
