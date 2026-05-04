@@ -1,16 +1,43 @@
 ---
-layout: publications  # Use your new layout
+layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
 
-{% include base_path %}
+<style>
+.publication-card {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+.publication-image img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+</style>
 
-<!-- Link to your publications.css -->
-<link rel="stylesheet" href="{{ '/assets/css/publications.css'   relative_url }}">
-
-<!-- Loop through publications and render each as a card -->
 {% for post in site.publications reversed %}
-  {% include archive-single-publication.html %}
+<div class="publication-card">
+  <div class="publication-image">
+    <a href="{{ post.paperurl }}">
+      <img src="/assets/images/publications/{{ post.permalink | split: '/' | last }}.png"
+           alt="Thumbnail for {{ post.title }}">
+    </a>
+  </div>
+  <div class="publication-content">
+    <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
+    <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
+    <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+    <p><strong>Authors:</strong> {{ post.citation | replace: '<b>', '' | replace: '</b>', '' | replace: '<i>', '' | replace: '</i>', '' }}</p>
+    <p>
+      <a href="{{ post.doi }}">DOI</a>
+      {% if post.paperurl != post.doi %}
+        | <a href="{{ post.paperurl }}">PDF</a>
+      {% endif %}
+    </p>
+  </div>
+</div>
 {% endfor %}
