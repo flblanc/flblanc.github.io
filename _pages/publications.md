@@ -21,18 +21,19 @@ author_profile: true
 {% for post in site.publications reversed %}
 <div class="publication-card">
   <div class="publication-image">
-    <a href="{{ post.paperurl }}">
+    <a href="{{ post.permalink }}">
       <img src="/images/publications/{{ post.permalink | split: '/' | last }}.png"
            alt="{{ post.title }}">
     </a>
   </div>
   <div class="publication-content">
-    <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
+    <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
     <p>{{ post.authors | join: ", " }}</p>
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
+    <p><span style="font-family: monospace;">{{ post.doi }}</span></p>
     <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>
     <p>
-      <a href="{{ post.doi }}">DOI</a>
+      <a href="{{ post.paperurl }}">URL</a>
       <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
     </p>
   </div>
