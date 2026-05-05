@@ -13,12 +13,12 @@ author_profile: true
   align-items: flex-start;
 }
 .publication-image img {
-  width: 400px;
+  width: 100%;
   height: auto;
   border-radius: 4px;
 }
 </style>
-
+ 
 {% for post in site.publications reversed %}
 <div class="publication-card">
   <div class="publication-image">
@@ -29,8 +29,7 @@ author_profile: true
   </div>
   <div class="publication-content">
     <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-    <p>{{ post.authors }}</p>
-
+    <p>{{ post.authors | join: ", " }}</p>
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
     <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>
     <p>
