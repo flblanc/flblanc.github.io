@@ -23,7 +23,7 @@ author_profile: true
 <div class="publication-card">
   <div class="publication-image">
     <a href="{{ post.paperurl }}">
-      <img src="/assets/images/publications/{{ post.permalink | split: '/' | last }}.png"
+      <img src="/images/publications/{{ post.permalink | split: '/' | last }}.png"
            alt="Thumbnail for {{ post.title }}">
     </a>
   </div>
