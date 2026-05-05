@@ -29,9 +29,10 @@ author_profile: true
   </div>
   <div class="publication-content">
     <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
+    <p><strong>Authors:</strong> {{ post.authors }}</p>
+
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
     <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>
-    <p><strong>Authors:</strong> {{ post.authors | replace: '<b>', '' | replace: '</b>', '' | replace: '<i>', '' | replace: '</i>', '' }}</p>
     <p>
       <a href="{{ post.doi }}">DOI</a>
       <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
