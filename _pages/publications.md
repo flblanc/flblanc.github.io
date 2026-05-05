@@ -24,19 +24,17 @@ author_profile: true
   <div class="publication-image">
     <a href="{{ post.paperurl }}">
       <img src="/images/publications/{{ post.permalink | split: '/' | last }}.png"
-           alt="Thumbnail for {{ post.title }}">
+           alt="{{ post.title }}">
     </a>
   </div>
   <div class="publication-content">
     <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
-    <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
-    <p><strong>Authors:</strong> {{ post.citation | replace: '<b>', '' | replace: '</b>', '' | replace: '<i>', '' | replace: '</i>', '' }}</p>
+    <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>
+    <p><strong>Authors:</strong> {{ post.authors | replace: '<b>', '' | replace: '</b>', '' | replace: '<i>', '' | replace: '</i>', '' }}</p>
     <p>
       <a href="{{ post.doi }}">DOI</a>
-      {% if post.paperurl != post.doi %}
-        | <a href="{{ post.paperurl }}">PDF</a>
-      {% endif %}
+      <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
     </p>
   </div>
 </div>
