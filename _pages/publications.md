@@ -30,7 +30,7 @@ author_profile: true
     <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
     <p>{{ post.authors | join: ", " }}</p>
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
-    <p><span style="font-family: monospace;">{{ post.doi }}</span></p>
+    <p><span style="font-family: monospace; font-size: 0.5rem">{{ post.doi }}</span></p>
     <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>
     <p>
       <a href="{{ post.paperurl }}">URL</a>
