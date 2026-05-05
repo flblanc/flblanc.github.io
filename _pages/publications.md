@@ -13,7 +13,7 @@ author_profile: true
   align-items: flex-start;
 }
 .publication-image img {
-  width: 100px;
+  width: 400px;
   height: auto;
   border-radius: 4px;
 }
@@ -29,7 +29,7 @@ author_profile: true
   </div>
   <div class="publication-content">
     <h3><a href="{{ post.paperurl }}">{{ post.title }}</a></h3>
-    <p><strong>Authors:</strong> {{ post.authors }}</p>
+    <p>{{ post.authors }}</p>
 
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
     <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>

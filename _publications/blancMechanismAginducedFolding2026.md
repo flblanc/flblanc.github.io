@@ -6,7 +6,7 @@ date: 2026-02-10
 venue: 'The Journal of Physical Chemistry Letters' 
 doi: 'https://doi.org/10.1021/acs.jpclett.6c00044'
 authors:  
-  - "**Florian E.C. Blanc** (corr.)"
+  - "<strong>Florian E.C. Blanc</strong> (corr.)"
   - "Maggy Hologne"
   - "Marion Girod"
   - "Mélodie Demontrond"
