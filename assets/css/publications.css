@@ -58,3 +58,9 @@
   margin: 5px 0;
   line-height: 1.4;
 }
+
+<style>
+  .publication-title {
+    font-size: 1.25em; /* or 1.25rem, 2em, etc. */
+}
+</style>

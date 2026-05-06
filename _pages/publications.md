@@ -27,11 +27,11 @@ author_profile: true
     </a>
   </div>
   <div class="publication-content">
-    <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+    <h3 class="publication-title"><a href="{{ post.permalink }}">{{ post.title }}</a>
+    </h3>
     <p>{{ post.authors | join: ", " }}</p>
     <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
-    <p><span style="font-family: monospace; font-size: 0.5rem">{{ post.doi }}</span></p>
-    <p>{{ post.summary | strip_html | truncatewords: 300 }}</p>
+    <p>{{ post.summary | strip_html }}</p>
     <p>
       <a href="{{ post.paperurl }}">URL</a>
       <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
