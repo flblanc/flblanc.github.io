@@ -6,7 +6,7 @@
 /* ---------- KNOBS ---------- */
 :root {
   /* Card */
-  --publication-card-gap:          2rem;      /* vertical space between cards */
+  --publication-card-gap:          2rem;      /* vertical space between cards        */
   --publication-card-padding:      1.25rem;
   --publication-card-radius:       6px;
 
@@ -17,12 +17,16 @@
   --publication-links-size:        0.88rem;
 
   /* Body */
-  --publication-body-gap:          1.25rem;  /* space between image col and summary col */
-  --publication-body-top-gap:      0.9rem;   /* space between header and body */
-  --publication-summary-size:      0.88rem;
+  --publication-body-gap:          1.25rem;   /* space between image and summary     */
+  --publication-body-top-gap:      0.9rem;    /* space between header and body       */
 
-  /* Image column */
-  --publication-image-width:       50%;      /* each column = 50 % */
+  /* Image column — width is fixed; height follows natural aspect ratio.
+     Uncomment --publication-image-max-height to cap very tall images.      */
+  --publication-image-width: clamp(180px, 35%, 300px);
+  /* --publication-image-max-height: 220px; */
+
+  /* Summary */
+  --publication-summary-size:      0.88rem;
 }
 /* ----------------------------- */
 
@@ -44,7 +48,7 @@
 }
 
 
-/* ---- Header (full-width block) ---- */
+/* ---- Header (full-width) ---- */
 .publication-header {
   width: 100%;
   margin-bottom: var(--publication-body-top-gap);
@@ -95,48 +99,45 @@
 }
 
 
-/* ---- Body (two equal columns) ---- */
+/* ---- Body (image left, summary right) ---- */
 .publication-body {
   display: flex;
   flex-direction: row;
+  align-items: center;              /* summary vertically centered on the image  */
   gap: var(--publication-body-gap);
-  align-items: stretch;
   border-top: 1px solid #ebebeb;
   padding-top: var(--publication-body-top-gap);
 }
 
+/* Image column: fixed width, natural height.
+   If --publication-image-max-height is defined, tall images are capped
+   and shown with object-fit: contain (no cropping, small letterbox).        */
 .publication-image {
   flex: 0 0 var(--publication-image-width);
   width: var(--publication-image-width);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.publication-image img {
-  position: static;   /* reset — img is inside the absolute <a> */
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
 }
 
 .publication-image a {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
+.publication-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: var(--publication-image-max-height, none);
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+/* Summary column: takes all remaining space */
 .publication-summary {
   flex: 1 1 0;
+  min-width: 0;
   font-size: var(--publication-summary-size);
   color: #444;
   line-height: 1.55;
-  align-self: center;
 }
 
 
