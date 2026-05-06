@@ -5,37 +5,35 @@ permalink: /publications/
 author_profile: true
 ---
 
-<style>
-.publication-card {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-.publication-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-</style>
- 
+<link rel="stylesheet" href="/assets/css/publications.css">
+
 {% for post in site.publications reversed %}
 <div class="publication-card">
-  <div class="publication-image">
-    <a href="{{ post.permalink }}">
-      <img src="/images/publications/{{ post.permalink | split: '/' | last }}.png"
-           alt="{{ post.title }}">
-    </a>
-  </div>
-  <div class="publication-content">
-    <h3 class="publication-title"><a href="{{ post.permalink }}">{{ post.title }}</a>
+
+  <div class="publication-header">
+    <h3 class="publication-title">
+      <a href="{{ post.permalink }}">{{ post.title }}</a>
     </h3>
-    <p>{{ post.authors | join: ", " }}</p>
-    <p><em>{{ post.venue }}, {{ post.date | date: "%Y" }}</em></p>
-    <p>{{ post.summary | strip_html }}</p>
-    <p>
-      <a href="{{ post.paperurl }}">URL</a>
+    <p class="publication-authors">{{ post.authors | join: ", " }}</p>
+    <p class="publication-venue"><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
+    <p class="publication-links">
+      <a href="{{ post.paperurl }}">DOI</a>
+      &nbsp;|&nbsp;
       <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
     </p>
   </div>
+
+  <div class="publication-body">
+    <div class="publication-image">
+      <a href="{{ post.permalink }}">
+        <img src="/images/publications/{{ post.permalink | split: '/' | last }}.png"
+             alt="{{ post.title }}">
+      </a>
+    </div>
+    <div class="publication-summary">
+      {{ post.summary }}
+    </div>
+  </div>
+
 </div>
 {% endfor %}

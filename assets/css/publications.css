@@ -1,66 +1,148 @@
+/* ============================================================
+   PUBLICATION CARDS  —  publications.css
+   Sizing/spacing knobs are collected at the top for easy tuning
+   ============================================================ */
+
+/* ---------- KNOBS ---------- */
+:root {
+  /* Card */
+  --publication-card-gap:          2rem;      /* vertical space between cards */
+  --publication-card-padding:      1.25rem;
+  --publication-card-radius:       6px;
+
+  /* Header typography */
+  --publication-title-size:        1.15rem;
+  --publication-authors-size:      0.92rem;
+  --publication-venue-size:        0.9rem;
+  --publication-links-size:        0.88rem;
+
+  /* Body */
+  --publication-body-gap:          1.25rem;  /* space between image col and summary col */
+  --publication-body-top-gap:      0.9rem;   /* space between header and body */
+  --publication-summary-size:      0.88rem;
+
+  /* Image column */
+  --publication-image-width:       50%;      /* each column = 50 % */
+}
+/* ----------------------------- */
+
+
+/* ---- Card shell ---- */
 .publication-card {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--publication-card-radius);
+  padding: var(--publication-card-padding);
+  margin-bottom: var(--publication-card-gap);
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .publication-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
 }
 
-.publication-image {
-  flex: 1;
-  margin-right: 15px;
-  flex-shrink: 0;
+
+/* ---- Header (full-width block) ---- */
+.publication-header {
+  width: 100%;
+  margin-bottom: var(--publication-body-top-gap);
 }
 
-.publication-image img {
-  border: 1px solid #ddd;
+.publication-title {
+  font-size: var(--publication-title-size);
+  font-weight: 700;
+  margin: 0 0 0.35rem 0;
+  color: #1a252f;
+  line-height: 1.35;
 }
 
-.publication-content {
-  flex: 1;
-  flex-grow: 1;
-}
-
-.publication-content h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: #2c3e50;
-  font-size: 1.4em;
-}
-
-.publication-content h3 a {
+.publication-title a {
+  color: inherit;
   text-decoration: none;
 }
 
-.publication-content h3 a:hover {
-  text-decoration: none;
-}
-
-.publication-content a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.publication-content a:hover {
+.publication-title a:hover {
   text-decoration: underline;
 }
 
-.publication-content p {
-  margin: 5px 0;
+.publication-authors {
+  font-size: var(--publication-authors-size);
+  margin: 0 0 0.2rem 0;
+  color: #333;
   line-height: 1.4;
 }
 
-<style>
-  .publication-title {
-    font-size: 1.25em; /* or 1.25rem, 2em, etc. */
+.publication-venue {
+  font-size: var(--publication-venue-size);
+  margin: 0 0 0.3rem 0;
+  color: #555;
 }
-</style>
+
+.publication-links {
+  font-size: var(--publication-links-size);
+  margin: 0;
+}
+
+.publication-links a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.publication-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---- Body (two equal columns) ---- */
+.publication-body {
+  display: flex;
+  flex-direction: row;
+  gap: var(--publication-body-gap);
+  align-items: center;          /* vertical centering */
+  border-top: 1px solid #ebebeb;
+  padding-top: var(--publication-body-top-gap);
+}
+
+.publication-image {
+  flex: 0 0 var(--publication-image-width);
+  width: var(--publication-image-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publication-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: block;
+}
+
+.publication-image a {
+  display: block;
+  width: 100%;
+}
+
+.publication-summary {
+  flex: 1 1 0;
+  font-size: var(--publication-summary-size);
+  color: #444;
+  line-height: 1.55;
+  align-self: center;
+}
+
+
+/* ---- Responsive: stack on small screens ---- */
+@media (max-width: 600px) {
+  .publication-body {
+    flex-direction: column;
+  }
+
+  .publication-image {
+    flex: none;
+    width: 100%;
+  }
+}
