@@ -2,21 +2,22 @@
 main:
   - title: "Publications"
     url: /publications/ 
-     
-  - title: "Datasets"
-    url: /datasets/ 
+
+  - title: "Open Positions"
+    url: /open-positions/
+    
     
   - title: "Teaching"
     url: /teaching/    
     
-  - title: "Gallery"
-    url: /gallery/
+  #- title: "Gallery"
+  #  url: /gallery/
         
-  - title: "Blog"
-    url: /year-archive/
+ # - title: "Blog"
+ #   url: /year-archive/
     
   - title: "CV"
     url: /cv/
 
-  - title: "Open Positions"
-    url: /open-positions/
+  - title: "Datasets"
+    url: /datasets/ 
