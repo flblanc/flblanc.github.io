@@ -17,7 +17,7 @@ author_profile: true
     <p class="publication-authors">{{ post.authors | join: ", " }}</p>
     <p class="publication-venue"><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
     <p class="publication-links">
-      <a href="{{ post.paperurl }}">DOI</a>
+      <a href="{{ post.paperurl }}">URL</a>
       &nbsp;|&nbsp;
       <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
     </p>
