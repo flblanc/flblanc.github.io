@@ -100,7 +100,7 @@
   display: flex;
   flex-direction: row;
   gap: var(--publication-body-gap);
-  align-items: center;          /* vertical centering */
+  align-items: stretch;
   border-top: 1px solid #ebebeb;
   padding-top: var(--publication-body-top-gap);
 }
@@ -111,19 +111,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .publication-image img {
-  width: 100%;
+  position: static;   /* reset — img is inside the absolute <a> */
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  display: block;
+  object-fit: contain;
 }
 
 .publication-image a {
-  display: block;
-  width: 100%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .publication-summary {
