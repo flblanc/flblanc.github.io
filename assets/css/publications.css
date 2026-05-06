@@ -12,9 +12,9 @@
 
   /* Header typography */
   --publication-title-size:        1.15rem;
-  --publication-authors-size:      0.92rem;
-  --publication-venue-size:        0.9rem;
-  --publication-links-size:        0.88rem;
+  --publication-authors-size:      0.9rem;
+  --publication-venue-size:        0.85rem;
+  --publication-links-size:        0.75rem;
 
   /* Body */
   --publication-body-gap:          1.25rem;   /* space between image and summary     */
@@ -26,7 +26,7 @@
   /* --publication-image-max-height: 220px; */
 
   /* Summary */
-  --publication-summary-size:      0.88rem;
+  --publication-summary-size:      0.9rem;
 }
 /* ----------------------------- */
 

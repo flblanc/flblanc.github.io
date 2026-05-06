@@ -7,9 +7,9 @@ venue: 'PLOS Computational Biology'
 doi: 'https://doi.org/10.1371/journal.pcbi.1012005'
 paperurl: 'https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012005'
 authors: 
-  - "<b>Florian E.C. Blanc*</b>"
+  - "<b>Florian E.C. Blanc (corr.)</b>"
   - "Anne Houdusse"
-  - "Marco Cecchini"
+  - "Marco Cecchini (corr.)"
 summary: With eABF and the string method, we find that the recovery stroke of myosin VI is initiated by lever-arm re-priming with only weak coupling to ATPase activation.
 
 ---
