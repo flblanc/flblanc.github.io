@@ -32,7 +32,7 @@ Check out our [open positions](/open-positions/) or contact me directly at <a hr
 ## [News](/news/)
 
 <ul>
-{% for item in site.data.news limit:5 %}
+{% for item in site.data.news limit:8 %}
   <li>
     <strong>{{ item.date }}</strong> —
     {% if item.url %}
