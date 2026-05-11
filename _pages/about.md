@@ -26,7 +26,7 @@ The systems I study range from short **peptides** to large **molecular machines*
 helping to map its conformational dynamics and identify target sites for vaccines. More recently, I started to explore how **deep learning** can help us integrate experiments with simulations.
 
 If you are a student curious about how molecules work at the atomic scale, and how we can use computers to understand this, I would love to hear from you.
-Check out our [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;com">florian.blanc [at] cnrs [dot] com</a>.
+Read carefully my [advice for applicants](/application-advice/) to get an idea of what I expect and how I like to work. If this looks like a fit, check out our [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;com">florian.blanc [at] cnrs [dot] com</a> !
 
 
 ## [News](/news/)
