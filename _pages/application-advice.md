@@ -100,14 +100,14 @@ Advanced technical expertise is absolutely not expected at this stage.
 - Machine-learning analysis of molecular conformational ensembles
 
 ## M2 students (second-year Master's level)
-At this stage, students are expected to function as junior researchers rather than as students discovering the field for the first time. Accordingly, M2 internships are substantially more demanding and are usually designed to lead-up to a PhD project (but you do not have to commit to staying for a PhD right away).  
+At this stage, students are expected to function as junior researchers rather than as students discovering the field for the first time. Accordingly, M2 internships are substantially more demanding and are usually designed to lead-up to a PhD project (but you do not have to commit to a PhD right away).  
 
 ### Typical internship
 - **Project scope:** a relatively autonomous and self-contained research project, often laying the groundwork for a PhD topic
 - **Duration:** typically 6 months
 - **Compensation:** standard French M2 internship stipend (~600€/month)
 
-The level of independence expected is correspondingly higher. I do not expect students to know everything already, but I do expect them to progressively become capable of identifying problems, reading documentation and papers independently, debugging their own workflows, and presenting/discussing scientific results critically. 
+The level of independence expected is correspondingly higher. I do not expect you to know everything already, but I do expect you to progressively become capable of identifying problems, reading documentation and papers independently, debugging your own workflows, and presenting/discussing scientific results critically. 
 
 ### Expected background
 At this level, applicants are generally expected to have:
@@ -122,27 +122,27 @@ At this level, applicants are generally expected to have:
 # During the Internship
 
 ## Environment
-You will have your own desk and workstation (with Ubuntu), and access to supercomputing resources. I am part of an interdisciplinary research group that mixes computational science with wet lab research in biochemistry and structural biology. So, you will have multiple opportunities to interact with other scientists including experimentalists. Presence hours are flexible as long as progress is satisfactory.
+You will have your own desk and workstation (with Ubuntu), and access to supercomputing resources. I am part of an interdisciplinary research group that mixes computational science with wet lab research in biochemistry and structural biology. So, you will have constant opportunities to interact with a broad range of scientists, including experimentalists, at all levels (from interns to Full Professors). Presence hours are flexible as long as progress is satisfactory.
 
 ## Supervision
-I will personally supervise your work, possibly with assistance from an experienced student (M2/PhD student) or post-doctoral researcher. I am available for technical help; I expect you to seriously try on your own, but also not to spend more than a couple of days stuck on a technical problem, especially at the beginning of the project. We will have one-on-one ~1h update meetings every two weeks. Update meetings can be more frequent if requested, or conversely can be dropped down to once a month if after a few weeks it is clear that you can stay on track. There are also semi-regular group meetings, where you are expected to present your results in a few slides. 
+I will personally supervise your work, possibly with assistance from an experienced student (M2/PhD student) or post-doctoral researcher. I am available for technical help, within reason; I expect you to seriously try on your own, but also not to spend more than a couple of days stuck on a technical problem, especially at the beginning of the project. We will have one-on-one ~1h update meetings every two weeks. Update meetings can be made more frequent if requested, or conversely can be dropped down to once a month if after a few weeks it is clear that you can stay on track. There are also semi-regular group meetings, where you are expected to present your results in a few slides. 
 
 
 ## Scientific writing
 For your work to be useful to other scientists (and even to future you), it is critical that you write about it and how you did it. In addition, I believe very strongly that **writing about one's research is the best way to clarify one's ideas and scientific thinking**. And, **professional scientists are largely judged on the quantity and quality of their scientific writing** (publications, research proposals). Scientific writing is therefore a **crucial skill**, yet it is often overlooked in academic training programs, especially before the PhD. For these reasons, **I place a particular emphasis on writing for all my students**. 
 
-To promote the habit of regular scientific writing, I will expect **monthly reports** and encourage you to start writing your official report/thesis on week 1. Monthly written progress reports (1-4 pages) should concisely describe the work done, the main findings (with figures), their discussion, and the next steps.
+To promote the habit of regular scientific writing, I will expect **monthly reports** and encourage you to start writing your official report/thesis on week 1. Monthly written progress reports (1-4 pages) should concisely describe the work done, problems encountered, the main findings (with figures), their discussion, and the next steps.
 
-Once you have a sufficiently advanced draft of whatever important piece of writing you are supposed to deliver (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity for your supervisor to help you **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
+Once you have a sufficiently advanced draft of whatever important piece of writing you are supposed to deliver (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity to **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
 
 ## AI Chatbots
 **I urge you to use LLMs sparingly and never as a substitute for personal reflection**. I am aware this technology and its uses are evolving rapidly, which makes trying to edict strict rules pointless. Still, use your best, honest judgment. 
 
 Here are examples of what I consider acceptable uses of an LLM:
-- Getting acquainted with a new field or concept
-- Generating simple scripts for basic tasks (things like using bash to rename a large amount of files according to some non-trivial pattern, or tweaking the layout of a figure in matplotlib)
+- Getting acquainted with a new field, as a starting point for self-study
+- Generating simple scripts for basic tasks (like using bash to rename a large amount of files according to some non-trivial pattern, or tweaking the layout of a figure in matplotlib)
 - Improving a script/code you have written yourself
-- improve the flow and clarity of an already structured piece of writing
+- Improving the flow and clarity of an already structured text
 
 By contrast, I am cautious about the following use cases:
 - Turning a bullet list into a structured text, if it is intended for a piece of potentially published scientific writing (e.g. your thesis or a paper).
@@ -150,6 +150,9 @@ By contrast, I am cautious about the following use cases:
 - Generating illustrating images
 - Using an LLM as the *sole* source for a detailed literature search
 
-In brief, **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
+In brief, **you should generate yourself, and possibly let the LLM edit.** In any case, **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
+
 Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Thus, relying on an LLM would just deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. I have reviewed enough AI slop internship reports to attest of that. 
 
+# How to apply
+With all that, if you feel like your profile, interests and expectations would fit with mine, you can contact me directly by e-mail or apply to an [open position](/open-positions/). Include a description of your background, research interests, and career plans (no matter how vague). 
