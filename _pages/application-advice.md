@@ -9,15 +9,13 @@ redirect_from:
 ---
 
 
-
-# Before applying
 The projects I supervise are:
 
 - **basic research:** You will be asked to understand (and help formulate) an original **research question**, read the scientific literature, collect and analyze new data, and write about your findings. I will guide you through the process, but there will be **uncertainty**, **setbacks**, and **the project will change** over time. 
 
 - **primarily computational:** You will spend your time writing code and reports, running simulations, reading papers, analyzing data, debugging things that are supposed to work but decided not to, and generally trying to understand noisy molecular systems. You will be doing all that **in front of a computer screen**.
  
-**Before applying, make sure this actually corresponds to what you want to do, and that it matches the requirements of your program.** It is also a good a idea to have a look at my [publications](/publications/); there is no need to read everything in details, but that will show you the kind of questions I am interested in and the methods I use to tackle them. 
+**Before applying, make sure this actually corresponds to what you want to do, and that it matches the requirements of your program.** You should have a look at my [publications](/publications/); there is no need to read everything in details, but that will show you the kind of questions I am interested in and the methods I use to tackle them. 
 
 # Who should apply ? 
 Computational biophysics sits at the interface of several disciplines, and there is no single "right" profile to enter the field. I welcome applicants with backgrounds in biology, chemistry, physics, mathematics, machine learning, bioinformatics, etc. 
@@ -31,7 +29,7 @@ Most importantly: **this is research.** Background and technical skills are impo
 - are comfortable with abstraction and mathematical formalism
 - do not get discouraged by mistakes or failed attempts
 
-A big part of what makes research fun is its exploratory nature; but this is also what makes research difficult, slow, sometimes confusing and frustrating. My role as a supervisor is to help you learn how to do research, and hopefully enjoy it, without unnecessary pressure. Honest mistakes, confusion, lack of knowledge, and failed ideas are normal and expected; lack of engagement is much harder to work with.
+Research is fun because it is exploratory; but this is also what makes it difficult, slow, sometimes confusing and frustrating. My role as a supervisor is to help you learn how to do research, and hopefully enjoy it, without unnecessary pressure. Honest mistakes, confusion, lack of knowledge, and failed ideas are normal and expected. Lack of engagement, however, is much harder to work with.
 
 If this sounds like a challenge you are excited to tackle, you are probably in the right place ! Conversely, if you are mainly looking for a short internship unrelated to research, or have little interest in computational molecular science itself, you are unlikely to enjoy working with me and you should probably apply elsewhere.
 
@@ -67,7 +65,7 @@ Here are examples of questions relevant for the research I do. They are not form
 If basically nothing on this list is familiar to you, then the research I do and the projects I supervise are probably not a good match for your current background.
 
 # Expected technical / programming skills
-Because the projects are computational, some amount of technical proficiency is necessary on top of broad disciplinary knowledge . Useful skills include:
+Because the projects are computational, some amount of technical proficiency is necessary in addition to broader disciplinary knowledge. Useful skills include:
 - Linux command-line usage
 - Basic Python programming
 - Scientific Python libraries (Numpy, matplotlib, Jupyter notebooks, etc) 
@@ -85,7 +83,7 @@ For L3/M1, I mainly look for scientific curiosity, seriousness, and the ability 
 ### Typical internship: 
 - **Project scope:** small scale, self-contained research project taylored to your skill level
 - **Duration:** 2-3 months; M1 students can apply for longer stays (up to 6 months)
-- **Compensation:** no compensation if the internship lasts less than 3 months, ~600 €/month otherwise
+- **Compensation:** no compensation if the internship lasts less than 3 months, ~600€/month otherwise
 
 Projects at this stage are designed primarily as research training. The main objective is to discover how computational research is actually done: reading papers, handling data, running and analyzing simulations, discussing results, and progressively learning how to think about scientific problems in a more autonomous way. Publications and conference presentations can result, but are not particularly expected.
 
@@ -94,7 +92,6 @@ At this level, I usually expect:
 - solid undergraduate-level foundations in at least one relevant scientific discipline
 - basic programming and data-analysis skills
 - enough scientific maturity to read scientific papers with guidance
-
 Advanced technical expertise is absolutely not expected at this stage.
 
 ### Example projects
@@ -108,7 +105,7 @@ At this stage, students are expected to function as junior researchers rather th
 ### Typical internship
 - **Project scope:** a relatively autonomous and self-contained research project, often laying the groundwork for a PhD topic
 - **Duration:** typically 6 months
-- **Compensation:** standard French M2 internship stipend (~600 €/month)
+- **Compensation:** standard French M2 internship stipend (~600€/month)
 
 The level of independence expected is correspondingly higher. I do not expect students to know everything already, but I do expect them to progressively become capable of identifying problems, reading documentation and papers independently, debugging their own workflows, and presenting/discussing scientific results critically. 
 
@@ -151,5 +148,5 @@ I am more cautious about the following example use cases:
 - Using an LLM for a detailed literature search
 
 I have no strict objection to using an LLM to help/speed up your work, but **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
-Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Consequently, constantly relying on an LLM would just deprive yourself of a unique opportunity to improve crucial research skills, and generally waste your time and mine --- I have reviewed enough AI slop internship reports to be convinced of that. 
+Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Thus, relying on an LLM would just deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. I have reviewed enough AI slop internship reports to attest of that. 
 
