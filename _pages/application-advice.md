@@ -148,7 +148,7 @@ By contrast, I am cautious about the following use cases:
 - Turning a bullet list into a structured text, if it is intended for a piece of potentially published scientific writing (e.g. your thesis or a paper).
 - Generating critical code from scratch (a.k.a. vibe-coding your project)
 - Generating illustrating images
-- Using an LLM for a detailed literature search
+- Using an LLM as the *sole* source for a detailed literature search
 
 In brief, **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
 Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Thus, relying on an LLM would just deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. I have reviewed enough AI slop internship reports to attest of that. 
