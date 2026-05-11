@@ -1,11 +1,8 @@
 ---
-permalink: //application-advice/
-title: ""
+permalink: /application-advice/
+title: "Advice for applicants"
 excerpt: ""
 author_profile: true
-redirect_from:
-- /application-advice/
-- /application-advice.html
 ---
 
 
