@@ -1,19 +1,11 @@
 ---
-
-permalink: /
-
+permalink: //application-advice/
 title: ""
-
 excerpt: ""
-
 author_profile: true
-
 redirect_from:
-
 - /application-advice/
-
 - /application-advice.html
-
 ---
 
 
