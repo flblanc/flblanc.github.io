@@ -141,7 +141,8 @@ Here are examples of what I consider acceptable uses of an LLM:
 - Getting acquainted with a new field
 - Generating simple scripts for basic tasks (things like renaming or transferring large amounts of files)
 - Improving a script/code you have written yourself
-I am more cautious about the following example use cases:
+
+By contrast, I am cautious about the following example use cases:
 - Turning a bullet list into a structured text, if it is intended for a piece of scientific writing (e.g. your thesis or a paper). Using an LLM to improve the flow and clarity of an already structured piece of writing is ok.
 - Generating critical code from scratch (a.k.a. vibe-coding your project)
 - Generating illustrating images
