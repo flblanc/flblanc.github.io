@@ -1,8 +1,11 @@
 ---
+layout: archive
 permalink: /application-advice/
 title: "Advice for applicants"
 excerpt: ""
 author_profile: true
+redirect_from:
+  - /application-advice
 ---
 
 
@@ -14,7 +17,7 @@ The projects I supervise are:
 
 - **basic research:** You will be asked to understand (and help formulate) an original **research question**, read the scientific literature, collect and analyze new data, and write about your findings. I will guide you through the process, but there will be **uncertainty**, **setbacks**, and **the project will change** over time. 
 
-- **primarily computational:**. You will spend your time writing code and reports, running simulations, reading papers, analyzing data, debugging things that are supposed to work but decided not to, and generally trying to understand noisy molecular systems. You will be doing all **in front of a computer screen**.
+- **primarily computational:** You will spend your time writing code and reports, running simulations, reading papers, analyzing data, debugging things that are supposed to work but decided not to, and generally trying to understand noisy molecular systems. You will be doing all **in front of a computer screen**.
  
 **Before applying, make sure this actually corresponds to what you want to do, and that it matches the requirements of your program.** It is also a good a idea to have a look at my [publications](/publications/); there is no need to read everything in details, but that will show you the kind of questions I am interested in and the methods I use to tackle them. 
 
@@ -22,10 +25,7 @@ The projects I supervise are:
 
 Computational biophysics sits at the interface of several disciplines, and there is no single "right" profile to enter the field. I welcome applicants with backgrounds in biology, chemistry, physics, mathematics, machine learning, bioinformatics, etc. 
 
-Most importantly: **this is research.** 
-
-### This is research.
-Background and technical skills are important, but only insofar as you are **genuinely curious** and **excited** by the prospect of doing **novel research in computational molecular science**. The students who do well are usually those who:
+Most importantly: **this is research.** Background and technical skills are important, but only insofar as you are **genuinely curious** and **excited** by the prospect of doing **novel research in computational molecular science**. The students who do well are usually those who:
 
 - are genuinely interested in research and scientific questions
 - enjoy understanding how and why things work
@@ -38,7 +38,7 @@ A big part of what makes research fun is its exploratory nature; but this is als
 
 If this sounds like a challenge you are excited to tackle, you are probably in the right place ! Conversely, if you are mainly looking for a short internship unrelated to research, or have little interest in computational molecular science itself, you are unlikely to enjoy working with me and you should probably apply elsewhere.
 
-### Expected background and technical skills
+## Expected background and technical skills
 
 Typically, my research projects involve a combination of:
 
@@ -49,7 +49,7 @@ Typically, my research projects involve a combination of:
 You are not expected to know all these fields, but you should usually have at least some familiarity with two of them, and be willing to learn the third (How much familiarity depends on your academic level --- see below).
 
 
-#### A rough checklist
+### A rough checklist
 
 Here are examples of questions relevant for the research I do. They are not formal requirements, but they give a reasonable idea of the expected background. During interviews, I may ask questions like these to understand how you think and what concepts you are already comfortable with.
 
@@ -74,7 +74,7 @@ Here are examples of questions relevant for the research I do. They are not form
 
 If basically nothing on this list is familiar to you, then the research I do and the projects I supervise are probably not a good match for your current background.
 
-### Technical / programming skills
+## Technical / programming skills
 
 Because the projects are computational, some amount of technical proficiency is necessary on top of broad disciplinary knowledge . Useful skills include:
 
