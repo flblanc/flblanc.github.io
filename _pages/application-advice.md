@@ -74,7 +74,7 @@ Because the projects are computational, some amount of technical proficiency is 
 
 Prior experience with Molecular Dynamics simulations is helpful, but not mandatory for junior students. In any case, I care much more about whether somebody is capable of learning technical material than whether they already know a specific software package. Most technical skills can be acquired reasonably quickly if the underlying scientific motivation is there.
 
-# Types of Internships and Expectations by Academic Level
+# Expectations by Academic Level
 My expectations naturally increase with academic level. An M2 student applying for a six-month research internship is not evaluated by the same standards as an L3 student discovering research for the first time.
 
 ## L3 / M1 Students (final-year Bachelor’s or first-year Master’s level)
