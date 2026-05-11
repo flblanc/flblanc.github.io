@@ -135,19 +135,21 @@ To promote the habit of regular scientific writing, I will expect **monthly repo
 
 Once you have a sufficiently advanced draft of whatever important piece of writing you are supposed to deliver (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity for your supervisor to help you **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
 
-## Large Language Models-based AI Chatbots (LLMs)
-Considering what precedes, **I urge you to use LLMs sparingly and never as a substitute for personal reflection**. 
-Here are examples of what I consider acceptable uses of an LLM:
-- Getting acquainted with a new field
-- Generating simple scripts for basic tasks (things like renaming or transferring large amounts of files)
-- Improving a script/code you have written yourself
+## AI Chatbots
+**I urge you to use LLMs sparingly and never as a substitute for personal reflection**. I am aware this technology and its uses are evolving rapidly, which makes trying to edict strict rules pointless. Still, use your best, honest judgment. 
 
-By contrast, I am cautious about the following example use cases:
-- Turning a bullet list into a structured text, if it is intended for a piece of scientific writing (e.g. your thesis or a paper). Using an LLM to improve the flow and clarity of an already structured piece of writing is ok.
+Here are examples of what I consider acceptable uses of an LLM:
+- Getting acquainted with a new field or concept
+- Generating simple scripts for basic tasks (things like using bash to rename a large amount of files according to some non-trivial pattern, or tweaking the layout of a figure in matplotlib)
+- Improving a script/code you have written yourself
+- improve the flow and clarity of an already structured piece of writing
+
+By contrast, I am cautious about the following use cases:
+- Turning a bullet list into a structured text, if it is intended for a piece of potentially published scientific writing (e.g. your thesis or a paper).
 - Generating critical code from scratch (a.k.a. vibe-coding your project)
 - Generating illustrating images
 - Using an LLM for a detailed literature search
 
-I have no strict objection to using an LLM to help/speed up your work, but **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
+In brief, **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
 Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Thus, relying on an LLM would just deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. I have reviewed enough AI slop internship reports to attest of that. 
 
