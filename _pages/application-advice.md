@@ -11,7 +11,7 @@ redirect_from:
 
 The projects I supervise are:
 
-- **basic research:** You will be asked to understand (and help formulate) an original **research question**, read the scientific literature, collect and analyze new data, and write about your findings. I will guide you through the process, but there will be **uncertainty**, **setbacks**, and **the project will change** over time. 
+- **basic research:** You will be asked to understand (and help formulate) an original **research question**, read the scientific literature, collect and analyze new data, and write about your findings. I will guide you through the process, but there will be **uncertainty**, **setbacks**, and **the project will evolve** over time. 
 
 - **primarily computational:** You will spend your time writing code and reports, running simulations, reading papers, analyzing data, debugging things that are supposed to work but decided not to, and generally trying to understand noisy molecular systems. You will be doing all that **in front of a computer screen**.
  
