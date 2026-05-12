@@ -12,11 +12,9 @@ I am a **CNRS Research Scientist** at the [Institut des Sciences Analytiques](ht
 
 In my research, I use computer simulations to study how molecules move and interact. This helps understand biological and chemical processes at the atomic scale.  
 
-
 My work sits at the intersection of **computational molecular biophysics**, **physical chemistry**, and **integrative structural biology**. 
 My goal is to understand how the fast, near-random motions of atoms and molecules give rise to function, whether in biological systems or complex chemical assemblies.
  
-
 To do this, I combine:
  - **Molecular dynamics simulations** to model how molecules behave over time and predict their properties.
  - **Machine learning** to extract patterns from complex simulation data.
@@ -26,7 +24,7 @@ The systems I study range from short **peptides** to large **molecular machines*
 helping to map its conformational dynamics and identify target sites for vaccines. More recently, I started to explore how **deep learning** can help us integrate experiments with simulations.
 
 If you are a student curious about how molecules work at the atomic scale, and how we can use computers to understand this, I would love to hear from you.
-Read carefully my [advice for applicants](/application-advice/) to get an idea of what I expect and how I like to work. If this looks like a fit, check out our [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;com">florian.blanc [at] cnrs [dot] com</a> !
+Read my [advice for applicants](/application-advice/) to get an idea of what I expect and how I like to work. If this looks like a fit, check out our [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;fr">florian.blanc [at] cnrs [dot] fr</a> !
 
 
 ## [News](/news/)

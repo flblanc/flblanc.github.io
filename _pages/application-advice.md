@@ -155,4 +155,4 @@ In brief, **you should generate yourself, and possibly let the LLM edit.** In an
 Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Thus, relying on an LLM would just deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. I have reviewed enough AI slop internship reports to attest of that. 
 
 # How to apply
-With all that, if you feel like your profile, interests and expectations would fit with mine, you can contact me directly by <a href="mailto:florian&#46;blanc&#64;cnrs&#46;com">e-mail</a> or apply to an [open position](/open-positions/). Include a description of your background, research interests, and career plans (no matter how vague). I look forward to it !
+With all that, if you feel like your profile, interests and expectations would fit with mine, you can contact me directly by <a href="mailto:florian&#46;blanc&#64;cnrs&#46;fr">e-mail</a> or apply to an [open position](/open-positions/). Include a description of your background, research interests, and career plans (no matter how vague). I look forward to it !
