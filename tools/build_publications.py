@@ -81,7 +81,8 @@ def unlatex(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
-def format_authors(raw, extras):
+def split_authors(raw):
+    """BibTeX author field -> list of (first, last)."""
     names = []
     for a in re.split(r"\s+and\s+", raw.replace("\n", " ")):
         a = a.strip()
@@ -93,6 +94,11 @@ def format_authors(raw, extras):
             parts = unlatex(a).rsplit(" ", 1)
             first, last = (parts if len(parts) == 2 else ("", parts[0]))
         names.append((first.strip(), last.strip()))
+    return names
+
+
+def format_authors(raw, extras):
+    names = split_authors(raw)
     n_eq = int(extras.get("equal_contribution", 0))
     corr = set(extras.get("corresponding", []))
     out = []
@@ -183,13 +189,20 @@ def main():
                 notes.append(f"  {slug}: no {what}")
     if new_keys:  # append stubs, leaving the hand-edited file otherwise untouched
         with open("_data/pub_extras.yml", "a", encoding="utf-8") as f:
-            f.write("".join(f'\n{k}:\n  summary: ""\n' for k in new_keys))
+            f.write("".join(f'\n{k}:\n  summary: ""\n  # equal_contribution: 2\n  # corresponding: [{ME}]\n' for k in new_keys))
         print("added stubs to _data/pub_extras.yml for:", ", ".join(new_keys))
     # drop generated pages whose entry is gone from the .bib
     for path in glob.glob("_publications/*.md"):
         if os.path.basename(path) not in written and MARK in open(path, encoding="utf-8").read():
             os.remove(path)
             print("removed", path)
+    for e in entries:  # a corresponding surname that matches no author is silently ignored otherwise
+        extras = extras_all.get(e["key"], {})
+        names = {last for _, last in split_authors(e.get("author", ""))}
+        for surname in extras.get("corresponding", []):
+            if surname not in names:
+                print(f"warning: {e['key']}: corresponding author '{surname}' matches no author "
+                      f"(authors: {', '.join(sorted(names))})", file=sys.stderr)
     unknown = sorted(set(extras_all) - {e["key"] for e in entries})
     print(f"{len(written)} publication pages written from {args.bib}")
     if notes:
