@@ -2,9 +2,9 @@
 <p>{{ page.authors | join: ", " }}<br>
 <em>{{ page.venue }}</em>, {{ page.date | date: "%Y" }}</p>
 <p>
-  <a href="{{ page.paperurl }}">Publisher page</a>{% if page.pdf %} | <a href="{{ page.pdf }}">PDF</a>{% endif %}
+  <a href="{{ page.paperurl }}">Publisher page</a>{% if page.pdf != "" %} | <a href="{{ page.pdf }}">PDF</a>{% endif %}
 </p>
-{% if page.image %}<p><img src="{{ page.image }}" alt="{{ page.title }}" style="max-width: 100%;"></p>{% endif %}
+{% if page.image != "" %}<p><img src="{{ page.image }}" alt="{{ page.title }}" style="max-width: 100%;"></p>{% endif %}
 {% if page.summary != "" %}{{ page.summary | markdownify }}{% endif %}
 {% if page.abstract != "" %}
 <h4>Abstract</h4>
