@@ -2,6 +2,7 @@
 layout: archive
 permalink: /application-advice/
 title: "Advice for internship applications"
+description: "What to expect when doing an internship or thesis in the Biophysics of Complex Systems team in Lyon."
 excerpt: ""
 author_profile: true
 redirect_from:

@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Florian Blanc, PhD"
 title_separator          : "-"
 name                     : &name "Florian E.C. Blanc"
-description              : &description "CNRS Research Scientist"
+description              : &description "CNRS Research Scientist in computational molecular biophysics at ISA Lyon: molecular dynamics, machine learning and integrative structural biology."
 url                      : https://flblanc.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "flblanc/flblanc.github.io"
@@ -19,7 +19,6 @@ breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -62,7 +61,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile_reduced.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

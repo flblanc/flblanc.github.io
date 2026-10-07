@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Datasets"
+description: "Open simulation datasets from Florian Blanc's research on molecular machines."
 permalink: /datasets/
 author_profile: true
 ---

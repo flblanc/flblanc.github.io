@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "Publications"
+description: "Publications by Florian Blanc on molecular dynamics, ATP synthase, myosin and integrative structural biology."
 permalink: /publications/
 author_profile: true
 ---
