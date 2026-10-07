@@ -7,9 +7,9 @@ redirect_from:
   - /resume
 ---
 
-![](/assets/images/CV_frise_chronologique.png)
+![](/images/CV_frise_chronologique.png)
 
-Download my detailed CV [here](/assets/files/FlorianBlanc_CV.pdf).
+Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 # Education
 

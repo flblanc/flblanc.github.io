@@ -29,7 +29,7 @@ Key questions remain unanswered about TNAP's catalytic mechanism:
 - How do small pH changes result in large changes in enzymatic activity? 
 - What is the atomic-level mechanism of phosphate cleavage? 
 
-<img src="/images/TNAP_ATP.png" alt="TNAP_ATP" width="600" />
+<img src="/images/TNAP_ATP.jpg" alt="TNAP_ATP" width="600" />
 
 ## Project
 Our experimental collaborators have recently solved **high-resolution structures** of TNAP bound to several substrates, putting us in an ideal position to investigate the enzymatic activity of TNAP at atomic resolution. This Master's project will integrate classical **Molecular Dynamics 
