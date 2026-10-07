@@ -1,0 +1,53 @@
+# Hand-written extras for the publication pages, keyed by the BibTeX citation key.
+# Everything NOT in Zotero lives here. tools/build_publications.py merges it with
+# _bibliography/MyPublications.bib to generate _publications/*.md (never edit those).
+#
+# Supported fields (all optional):
+#   summary             personal summary shown on the publications page
+#   equal_contribution  number of leading authors flagged as equal contributors (*)
+#   corresponding       list of author surnames flagged "(corr.)"
+#   paperurl            link to use instead of https://doi.org/<doi>
+#   title, venue, date  override the Zotero value (date: YYYY-MM-DD)
+#   slug                keep an older URL / image / PDF filename (default: the key)
+#   hide                true to leave the entry off the site
+# Cover image:  images/publications/<slug>.png  (or .jpg/.webp)
+# PDF:          files/publications/<slug>.pdf
+
+blancAsymmetricMechanismSymmetric2021:
+  summary: We combine ABF and the string method to look at how a synthetic molecular muscle contracts, and show that an asymmetric pathway in which subunits bend and rearrange sequentially dominates despite the symmetry of the supra-molecule.
+blancIntermediateRecoveryStroke2018:
+  summary: With crystallography, conventional MD and ABF, we characterise a structural state of the myosin motor domain that suggests a "ratchet-like" mechanism in which lever-arm repriming precedes active site closure and is not strongly coupled to it.
+blancMechanismAg+InducedFolding2026:
+  corresponding:
+  - Blanc
+  - Walker
+  slug: blancMechanismAginducedFolding2026
+  summary: We use a custom bonded model and replica-exchange simulations to look at how Ag+ binding promotes the folding of an 11-residue peptide into an $\alpha$-helix. We train an autoencoder neural network to map the folding landscape. There is even some NMR and Mass Spec in there.
+  title: Mechanism of Ag<sup>+</sup>-Induced Folding of a Bacterial Peptide from Replica-Exchange Molecular Simulations
+blancMechanismProtonpoweredCring2024:
+  summary: With extensive eABF calculations, we reveal the mechanism of the 36 deg rotation step of the ATP synthase rotor, clarifying the water-mediated proton transfer pathway and the role of experimentally-detected intermediates.
+blancWeakCouplingMechanism2024:
+  corresponding:
+  - Blanc
+  - Cecchini
+  paperurl: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012005
+  summary: With eABF and the string method, we find that the recovery stroke of myosin VI is initiated by lever-arm re-priming with only weak coupling to ATPase activation.
+oosterheertMolecularMechanismsInorganicphosphate2023:
+  equal_contribution: 2
+  summary: We combine cryo-EM, enhanced sampling MD simulations, machine learning, and *in vivo* and *in vitro* reconstitution to reveal the mechanisms and pathways for Pi release from F-actin, both from filament interior and barbed end.
+planelles-herreroMyosinMyTH4FERMStructures2016:
+  summary: Crystallography, binding affinity assays and MD simulations reveal "molecular tinkering" at play in the evolution of microtubule-binding domains in myosin tails.
+roparsMyosinMotorOptimized2016:
+  equal_contribution: 3
+  summary: Crystallography, single-molecule studies and implicit solvent simulations reveal how myosin X is optimised to walk fast on F-actin bundles.
+sikoraComputationalEpitopeMap2021:
+  equal_contribution: 5
+  summary: We build one of the first complete models of the SARS-CoV-2 spike protein, simulate a viral membrane patch with 4 spike copies for 2.5 microseconds, and devise a machine learning approach to predict immunogenic sites from the simulation.
+turonovaSituStructuralAnalysis2020:
+  equal_contribution: 3
+  summary: <i>In situ</i> cryo-ET and molecular modelling reveal the hinges of the SARS-CoV-2 a few months into the pandemic.
+vonbulowAntibodyAccessibilityDetermines2023:
+  summary: Using data from the early days of the pandemic, we show that surface accessibility to antibodies -estimated using a simple computational protocol- is a predictor of mutation sites found in later variants of concern.
+
+troussicotMetadynamicsSimulationsMeet2026:
+  summary: ""

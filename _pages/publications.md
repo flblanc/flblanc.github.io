@@ -19,20 +19,21 @@ author_profile: true
     <p class="publication-venue"><em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}</p>
     <p class="publication-links">
       <a href="{{ post.paperurl }}">URL</a>
-      &nbsp;|&nbsp;
-      <a href="/files/publications/{{ post.permalink | split: '/' | last }}.pdf">PDF</a>
+      {% if post.pdf %}&nbsp;|&nbsp;
+      <a href="{{ post.pdf }}">PDF</a>{% endif %}
     </p>
   </div>
 
   <div class="publication-body">
+    {% if post.image %}
     <div class="publication-image">
       <a href="{{ post.permalink }}">
-        <img src="/images/publications/{{ post.permalink | split: '/' | last }}.png"
-             alt="{{ post.title }}">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
       </a>
     </div>
+    {% endif %}
     <div class="publication-summary">
-      {{ post.summary }}
+      {{ post.summary | markdownify }}
     </div>
   </div>
 
