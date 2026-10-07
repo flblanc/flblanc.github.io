@@ -1,0 +1,40 @@
+name: Regenerate publication pages
+
+# Runs when the Zotero export, the hand-written extras or the generator change,
+# regenerates _publications/*.md and commits the result back to the branch.
+on:
+  push:
+    paths:
+      - "_bibliography/MyPublications.bib"
+      - "_data/pub_extras.yml"
+      - "tools/build_publications.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python3 tools/build_publications.py
+      - name: Commit regenerated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A _publications _data/pub_extras.yml
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Regenerate publication pages"
+            git push
+          fi
