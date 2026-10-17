@@ -172,6 +172,8 @@ collections:
   open-positions:
     output: true
     permalink: /:collection/:path/
+  team:
+    output: false
 
 
 # Defaults

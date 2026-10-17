@@ -14,8 +14,8 @@ past_heading: ""
 
 <!-- TEXT: optional intro -->
 
-{% assign current = site.data.team | where: "status", "current" %}
-{% assign past = site.data.team | where: "status", "past" %}
+{% assign current = site.team | where: "status", "current" | sort: "start" | reverse %}
+{% assign past = site.team | where: "status", "past" | sort: "start" | reverse %}
 
 {% if current.size > 0 %}
 {% if page.current_heading != "" %}<h2>{{ page.current_heading }}</h2>{% endif %}
