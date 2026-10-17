@@ -1,0 +1,70 @@
+/* ============================================================
+   TEAM PAGE  —  team.css
+   Matches the publication cards (publications.css)
+   ============================================================ */
+
+/* ---------- KNOBS ---------- */
+:root {
+  --team-card-gap:        1.5rem;
+  --team-card-padding:    1.1rem;
+  --team-card-radius:     6px;
+  --team-name-size:       1.1rem;
+  --team-text-size:       0.9rem;
+  --team-details-size:    0.8rem;
+}
+/* ----------------------------- */
+
+
+/* ---- Current members: cards ---- */
+.team-member {
+  border: 1px solid #e0e0e0;
+  border-radius: var(--team-card-radius);
+  padding: var(--team-card-padding);
+  margin-bottom: var(--team-card-gap);
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+}
+
+.team-name {
+  font-size: var(--team-name-size);
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  color: #1a252f;
+}
+
+.team-stage + .team-stage {
+  border-top: 1px solid #ebebeb;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+}
+
+.team-stage p {
+  margin: 0 0 0.2rem 0;
+  font-size: var(--team-text-size);
+  line-height: 1.45;
+}
+
+.team-topic {
+  color: #444;
+}
+
+.team-details {
+  font-size: var(--team-details-size) !important;
+  color: #555;
+}
+
+.team-details span + span::before {
+  content: " · ";
+}
+
+
+/* ---- Open positions and past members: compact lists ---- */
+.team-open,
+.team-past {
+  font-size: var(--team-text-size);
+  line-height: 1.5;
+}
+
+.team-past li {
+  margin-bottom: 0.35rem;
+}

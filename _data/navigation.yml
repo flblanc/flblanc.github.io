@@ -1,7 +1,10 @@
 # main links links
 main:
   - title: "Publications"
-    url: /publications/ 
+    url: /publications/
+
+  - title: "Team"
+    url: /team/
 
   - title: "Open Positions"
     url: /open-positions/
