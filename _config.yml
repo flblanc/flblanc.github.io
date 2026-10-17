@@ -81,9 +81,9 @@ analytics:
 author:
   name             : "Florian E. C. Blanc"
   avatar           : "profile_reduced.png"
-  bio              : "Computational molecular biophysicist."
+  bio              : "Computational molecular biophysicist." # TEXT: revised bio, optional
   location         : "Lyon, France"
-  employer         :
+  employer         : # TEXT: affiliation, optional
   pubmed           : 
   googlescholar    : "https://scholar.google.fr/citations?user=ZiBNjcsAAAAJ&hl=en"
   email            : "florian.blanc@cnrs.fr"

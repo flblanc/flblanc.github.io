@@ -8,8 +8,10 @@ redirect_from:
   - /about.html
 ---
 
+<!-- TEXT: affiliation line (current text kept below until replaced) -->
 I am a **CNRS Research Scientist** at the [Institut des Sciences Analytiques](https://www.isa-lyon.fr/), France, where I am part of the interdisciplinary [**Biophysics of Complex Systems**](https://nmrbiolchem.univ-lyon1.fr/) team. 
 
+<!-- TEXT: research statement (current paragraphs kept below until replaced) -->
 In my research, I use computer simulations to study how molecules move and interact. This helps understand biological and chemical processes at the atomic scale.  
 
 My work sits at the intersection of **computational molecular biophysics**, **physical chemistry**, and **integrative structural biology**. 
@@ -23,6 +25,16 @@ To do this, I combine:
 The systems I study range from short **peptides** to large **molecular machines** (myosin, ATP synthase), with the occasional venture into **supra-molecular chemistry**.  I’ve also worked on the SARS-CoV-2 spike protein in the early days of the Covid-19 pandemic, 
 helping to map its conformational dynamics and identify target sites for vaccines. More recently, I started to explore how **deep learning** can help us integrate experiments with simulations.
 
+<!-- AT-A-GLANCE BLOCK: renders as a shaded box once filled and uncommented.
+TEXT: optional heading
+TEXT: line 1 (e.g. funding/resources)
+TEXT: line 2 (e.g. supervision)
+TEXT: line 3 (optional)
+{: .notice}
+LINKS: /team/ and /cv/ anchors added once those pages exist
+-->
+
+<!-- TEXT: recruitment note, 1-2 lines, linking /application-advice/ and /open-positions/ (current paragraph kept below until replaced) -->
 If you are a student curious about how molecules work at the atomic scale, and how we can use computers to understand this, I would love to hear from you.
 Read my [advice for applicants](/application-advice/) to get an idea of what I expect and how I like to work. If this looks like a fit, check out our [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;fr">florian.blanc [at] cnrs [dot] fr</a> !
 
