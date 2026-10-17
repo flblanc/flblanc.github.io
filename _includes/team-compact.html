@@ -1,0 +1,10 @@
+{% comment %}Compact one-line-per-person list of _team members (used on /team/ and /cv/).
+Usage: {% include team-compact.html members=list %}{% endcomment %}
+{% if include.members.size > 0 %}
+<ul class="team-past">
+{% for m in include.members %}
+  <li><strong>{{ m.name }}</strong>
+  {%- for s in m.stages %}{% if forloop.first %} — {% else %}; {% endif %}{{ s.level }}{% if s.dates and s.dates != "" %}, {{ s.dates }}{% endif %}{% if s.topic and s.topic != "" %}: {{ s.topic | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}{% if s.role and s.role != "" %} ({{ s.role }}){% endif %}{% endfor %}</li>
+{% endfor %}
+</ul>
+{% endif %}

@@ -48,10 +48,5 @@ past_heading: ""
 
 {% if past.size > 0 %}
 {% if page.past_heading != "" %}<h2>{{ page.past_heading }}</h2>{% endif %}
-<ul class="team-past">
-{% for m in past %}
-  <li><strong>{{ m.name }}</strong>
-  {%- for s in m.stages %}{% if forloop.first %} — {% else %}; {% endif %}{{ s.level }}{% if s.dates and s.dates != "" %}, {{ s.dates }}{% endif %}{% if s.topic and s.topic != "" %}: {{ s.topic | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}{% if s.role and s.role != "" %} ({{ s.role }}){% endif %}{% endfor %}</li>
-{% endfor %}
-</ul>
+{% include team-compact.html members=past %}
 {% endif %}
