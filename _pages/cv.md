@@ -17,6 +17,10 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 * **École Normale Supérieure**, Diploma in Biology and Physics, 2014
 * MSc in Bioinformatics, Paris-7 University, 2014
 
+# Qualification
+
+<!-- TEXT: qualification -->
+
 # Experience
 
 
@@ -43,3 +47,37 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
   * Strasbourg University & Institut Curie, France
   * Exploring chemo-mechanical transduction in the myosin molecular motor through computer simulations
   * Supervisors: Marco Cecchini & Anne Houdusse
+
+# Funding and resources
+
+<!-- TEXT: funding and resources -->
+
+# Supervision
+
+<!-- TEXT: optional intro; the list below is generated from _team/ -->
+
+{% assign supervised = site.team | sort: "start" | reverse %}
+{% include team-compact.html members=supervised %}
+
+# Teaching
+
+<!-- TEXT: optional intro; the list below is generated from _teaching/ -->
+
+{% assign courses = site.teaching | sort: "date" | reverse %}
+<ul>
+{% for course in courses %}
+  <li><a href="{{ course.url }}">{{ course.title }}</a>, {{ course.type }}, <i>{{ course.venue }}</i>, {{ course.date | date: "%Y" }}</li>
+{% endfor %}
+</ul>
+
+# Invited talks
+
+<!-- TEXT: invited talks -->
+
+# Reviewing
+
+<!-- TEXT: reviewing -->
+
+# Collective responsibilities
+
+<!-- TEXT: collective responsibilities -->
