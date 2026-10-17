@@ -1,2 +1,7 @@
 _site/
 
+
+# Local Bundler setup
+.bundle/
+vendor/
+Gemfile.lock
