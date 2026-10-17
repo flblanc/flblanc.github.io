@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a **CNRS Research Scientist** at the [Institut des Sciences Analytiques](https://www.isa-lyon.fr/), France, where I am part of the interdisciplinary [**Biophysics of Complex Systems**](http://nmrbiolchem.univ-lyon1.fr/) team. 
+I am a **CNRS Research Scientist** at the [Institut des Sciences Analytiques](https://www.isa-lyon.fr/), France, where I am part of the interdisciplinary [**Biophysics of Complex Systems**](https://nmrbiolchem.univ-lyon1.fr/) team. 
 
 In my research, I use computer simulations to study how molecules move and interact. This helps understand biological and chemical processes at the atomic scale.  
 
