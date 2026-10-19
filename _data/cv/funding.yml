@@ -1,0 +1,12 @@
+# Funding and resources, newest first. Single source for /cv/ and the PDF CV
+# (tools/build_cv.py -> cv/generated/funding.tex).
+# Fields: title, role, dates, items (bullet lines, optional), hide (true: left out of both)
+# Text may use **bold**, *italic* and [link](url).
+
+- title: DARI/GENCI allocation
+  role: PI
+  dates: May 2026 - April 2027
+
+- title: ANR MyoAssemble
+  role: Partner
+  dates: January 2026 - December 2029

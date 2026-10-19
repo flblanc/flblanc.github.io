@@ -1,8 +1,9 @@
 {% comment %}List of talks from _data/talks.yml (used on /talks/ and /cv/).
-Usage: {% include talks-list.html kind="invited" %}{% endcomment %}
+Usage: {% include talks-list.html kind="invited" %}  (kind: invited | oral | poster; omit for all){% endcomment %}
 <ul class="talks">
 {% for t in site.data.talks %}{% if include.kind == nil or t.kind == include.kind %}
   <li>{% if t.title %}<strong>{{ t.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</strong><br>{% endif %}
-  {{ t.label }}, {{ t.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% if t.location %}, {{ t.location }}{% endif %}, {{ t.date }}{% if t.host %} (invited by {{ t.host }}){% endif %}</li>
+  {% if t.authors %}{{ t.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}<br>{% endif %}
+  {% if t.label %}{{ t.label }}, {% endif %}{{ t.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% if t.location %}, {{ t.location }}{% endif %}, {{ t.date }}{% if t.host %} (invited by {{ t.host }}){% endif %}</li>
 {% endif %}{% endfor %}
 </ul>

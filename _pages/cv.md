@@ -24,7 +24,10 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 # Qualification
 
-<!-- TEXT: qualification -->
+{% comment %}Generated from _data/cv/qualification.yml (also used for the PDF CV){% endcomment %}
+{% for line in site.data.cv.qualification %}
+* {{ line }}
+{%- endfor %}
 
 # Experience
 
@@ -37,7 +40,13 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 # Funding and resources
 
-<!-- TEXT: funding and resources -->
+{% comment %}Generated from _data/cv/funding.yml (also used for the PDF CV){% endcomment %}
+{% for e in site.data.cv.funding %}{% unless e.hide %}
+* **{% if e.dates %}{{ e.dates }}: {% endif %}{{ e.title }}**{% if e.role %} ({{ e.role }}){% endif %}
+{%- for item in e.items %}
+  * {{ item }}
+{%- endfor %}
+{%- endunless %}{% endfor %}
 
 # Supervision
 
@@ -64,7 +73,10 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 # Reviewing
 
-<!-- TEXT: reviewing -->
+{% comment %}Generated from _data/cv/reviewing.yml (also used for the PDF CV){% endcomment %}
+{% for line in site.data.cv.reviewing %}
+* {{ line }}
+{%- endfor %}
 
 # Collective responsibilities
 

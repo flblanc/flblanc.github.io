@@ -10,3 +10,11 @@ author_profile: true
 ## Invited talks
 
 {% include talks-list.html kind="invited" %}
+
+## Oral communications
+
+{% include talks-list.html kind="oral" %}
+
+## Poster presentations
+
+{% include talks-list.html kind="poster" %}

@@ -2,14 +2,15 @@
 # (_includes/talks-list.html).
 #
 # Fields:
-#   kind      invited (only kind so far)
-#   label     e.g. "Invited seminar"
+#   kind      invited | oral | poster
+#   label     e.g. "Invited seminar" (optional)
 #   title     talk title (optional)
 #   venue     event or institution
 #   location  city (optional)
 #   date      e.g. "March 2026"
 #   host      who invited you (optional)
-# Text may use **bold**, *italic* and [link](url).
+#   authors   author line, e.g. for posters (optional; <u>name</u> underlines)
+# Text may use **bold**, *italic*, [link](url), <sup>, <sub> and <u>.
 
 - kind: invited
   label: Invited speaker
@@ -47,3 +48,45 @@
   location: Villeurbanne
   date: November 2021
   host: Olivier Walker
+
+# Oral communications (kind: oral) and posters (kind: poster); posters list their authors.
+
+- kind: oral
+  title: Mechanism of Ag<sup>+</sup>-induced folding of a bacterial peptide from molecular dynamics simulations and deep dimensionality reduction
+  venue: Machine Learning in Chemistry and Physics (MLCP2025) meeting
+  location: Lyon, France
+  date: June 2025
+
+- kind: oral
+  title: Mechanism and energetics of proton-powered c-ring rotation in mitochondrial ATP synthase
+  venue: Congrès du Groupe de Graphisme et Modélisation Moléculaires (GGMM)
+  location: Lille, France
+  date: September 2021
+
+- kind: poster
+  title: Mechanism of Ag<sup>+</sup>-induced folding of a bacterial peptide from molecular dynamics simulations
+  authors: <u>Blanc, F. E. C.</u>; Hologne, M.; Demontrond, M.; Chermette, H.; Walker, O.
+  venue: Congrès du GGMM
+  location: Forges-les-Eaux, France
+  date: "2025"
+
+- kind: poster
+  title: Mechanism of Ag<sup>+</sup>-induced folding of a bacterial peptide from molecular dynamics simulations
+  authors: <u>Blanc, F. E. C.</u>; Hologne, M.; Demontrond, M.; Chermette, H.; Walker, O.
+  venue: ML4NGP (Machine Learning for Non Globular Proteins) meeting
+  location: Vilnius, Lithuania
+  date: "2025"
+
+- kind: poster
+  title: A novel intermediate along the recovery stroke of Myosin VI revealed by X-ray crystallography and molecular dynamics
+  authors: <u>Florian Blanc</u>, Tatiana Isabet, Hannah Benisty, H. Lee Sweeney, Marco Cecchini, Anne Houdusse
+  venue: Congrès du Groupe de Graphisme et Modélisation Moléculaires (GGMM)
+  location: Reims, France
+  date: "2017"
+
+- kind: poster
+  title: A novel intermediate along the recovery stroke of Myosin VI revealed by X-ray crystallography and molecular dynamics
+  authors: <u>Florian Blanc</u>, Tatiana Isabet, Hannah Benisty, H. Lee Sweeney, Marco Cecchini, Anne Houdusse
+  venue: EMBO Meeting
+  location: Mannheim, Germany
+  date: "2016"
