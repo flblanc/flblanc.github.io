@@ -62,4 +62,13 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 # Collective responsibilities
 
-<!-- TEXT: collective responsibilities -->
+{% comment %}Generated from _data/cv/collective.yml (also used for the PDF CV){% endcomment %}
+{% for e in site.data.cv.collective %}{% unless e.hide %}
+* **{% if e.dates %}{{ e.dates }}: {% endif %}{{ e.title }}**
+{%- if e.organization or e.location %}
+  * {{ e.organization }}{% if e.organization and e.location %}, {% endif %}{{ e.location }}
+{%- endif %}
+{%- for item in e.items %}
+  * {{ item }}
+{%- endfor %}
+{%- endunless %}{% endfor %}

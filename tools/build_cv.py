@@ -29,6 +29,7 @@ def tex(s):
 
     s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", keep_link, str(s))
     s = "".join(LATEX_SPECIAL.get(c, c) for c in s)
+    s = re.sub(r'"([^"]*)"', r"``\1''", s)  # straight quotes -> opening/closing quotes
     s = re.sub(r"\*\*(.+?)\*\*", r"\\textbf{\1}", s)
     s = re.sub(r"\*(.+?)\*", r"\\textit{\1}", s)
     return re.sub(r"\0(\d+)\0", lambda m: r"\href{%s}{%s}" % (
@@ -61,7 +62,13 @@ def education(entries):
             "\\vspace{\\cvvertspace}%\n".join(cventry(e) for e in shown) + "\\end{cventries}\n")
 
 
-SECTIONS = {"experience": experience, "education": education}
+def collective(entries):
+    shown = [e for e in entries if not e.get("hide")]
+    return ("\\newpage\n\\cvsection{Collective responsibilities}\n\\begin{cventries}%\n" +
+            "".join(cventry(e) for e in shown) + "\\end{cventries}\n")
+
+
+SECTIONS = {"experience": experience, "education": education, "collective": collective}
 
 
 def main():
