@@ -6,7 +6,7 @@ start: "2024-03"
 stages:
   - level: "M1 student, Analyse et Contrôle, Université Claude Bernard Lyon 1"
     dates: "March - May 2024"
-    topic: ""
+    topic: "Machine learning analysis of peptide simulations"
     role: "Main supervisor"
     co_supervisors: "Olivier Walker"
     funding: ""
