@@ -4,7 +4,7 @@ Usage: {% include team-compact.html members=list %}{% endcomment %}
 <ul class="team-past">
 {% for m in include.members %}
   <li><strong>{{ m.name }}</strong>
-  {%- for s in m.stages %}{% if forloop.first %} — {% else %}; {% endif %}{{ s.level }}{% if s.dates and s.dates != "" %}, {{ s.dates }}{% endif %}{% if s.topic and s.topic != "" %}: {{ s.topic | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}{% if s.role and s.role != "" %} ({{ s.role }}){% endif %}{% endfor %}</li>
+  {%- for s in m.stages %}{% if forloop.first %} — {% else %}; {% endif %}{{ s.level }}{% if s.dates and s.dates != "" %}, {{ s.dates }}{% endif %}{% if s.topic and s.topic != "" %}: {{ s.topic | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}{% if s.role and s.role != "" %} ({{ s.role }}{% if s.co_supervisors and s.co_supervisors != "" %}, with {{ s.co_supervisors | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}){% endif %}{% endfor %}</li>
 {% endfor %}
 </ul>
 {% endif %}

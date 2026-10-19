@@ -52,8 +52,14 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 <!-- TEXT: optional intro; the list below is generated from _team/ -->
 
-{% assign supervised = site.team | sort: "start" | reverse %}
+{% assign supervised_all = site.team | sort: "start" | reverse %}
+{% assign supervised = supervised_all | where_exp: "m", "m.kind != 'project'" %}
+{% assign supervised_projects = supervised_all | where: "kind", "project" %}
 {% include team-compact.html members=supervised %}
+{% if supervised_projects.size > 0 %}
+**{{ site.pages | where: "permalink", "/team/" | map: "projects_heading" | first }}**
+{% include team-compact.html members=supervised_projects %}
+{% endif %}
 
 # Teaching
 

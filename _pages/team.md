@@ -8,6 +8,7 @@ author_profile: true
 current_heading: ""
 open_heading: ""
 past_heading: ""
+projects_heading: "Student project supervision"
 ---
 
 <link rel="stylesheet" href="/assets/css/team.css">
@@ -15,7 +16,9 @@ past_heading: ""
 <!-- TEXT: optional intro -->
 
 {% assign current = site.team | where: "status", "current" | sort: "start" | reverse %}
-{% assign past = site.team | where: "status", "past" | sort: "start" | reverse %}
+{% assign past_all = site.team | where: "status", "past" | sort: "start" | reverse %}
+{% assign past = past_all | where_exp: "m", "m.kind != 'project'" %}
+{% assign projects = past_all | where: "kind", "project" %}
 
 {% if current.size > 0 %}
 {% if page.current_heading != "" %}<h2>{{ page.current_heading }}</h2>{% endif %}
@@ -49,4 +52,9 @@ past_heading: ""
 {% if past.size > 0 %}
 {% if page.past_heading != "" %}<h2>{{ page.past_heading }}</h2>{% endif %}
 {% include team-compact.html members=past %}
+{% endif %}
+
+{% if projects.size > 0 %}
+{% if page.projects_heading != "" %}<h2>{{ page.projects_heading }}</h2>{% endif %}
+{% include team-compact.html members=projects %}
 {% endif %}
