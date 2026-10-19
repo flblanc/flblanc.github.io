@@ -1,6 +1,8 @@
 ---
-title: "MD_Simulations_Molecular_mechanisms_of_inorganic-phosphate_release_from_the_core_and_barbed_end_of_actin_filaments"
+title: "Simulation data for Molecular mechanisms of inorganic-phosphate release from the core and barbed end of actin filaments"
 collection: datasets
+redirect_to: https://doi.org/10.5281/zenodo.7765025
+sitemap: false
 year: 2023
 ---
 

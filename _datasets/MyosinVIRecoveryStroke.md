@@ -1,6 +1,8 @@
 ---
 title: "Data for A weak coupling mechanism for the early steps of the recovery stroke of myosin VI: a free energy simulation and string method analysis"
 collection: datasets
+redirect_to: https://doi.org/10.5281/zenodo.8415241
+sitemap: false
 year: 2024
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Data for Mechanism of proton-powered c-ring rotation in a mitochondrial ATP synthase."
 collection: datasets
+redirect_to: https://doi.org/10.5281/zenodo.8124466
+sitemap: false
 year: 2024
 ---
 
