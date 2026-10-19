@@ -1,0 +1,58 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Original author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Modifications by:
+% Junhao Dong <junhao.dong96@gmail.com>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+\documentclass[11pt, a4paper]{awesome-cv}
+\usepackage{multicol}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\fontdir[fonts/]
+
+\colorlet{awesome}{awesome-skyblue}
+
+\setbool{acvSectionColorHighlight}{true}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
+
+\usepackage{chemformula}
+
+\name{Florian E. C.}{Blanc, PhD}
+\position{CNRS Research Scientist in computational molecular biophysics}
+
+\nationality{French}
+\dateofbirth{November 19, 1990}
+\email{florian.blanc@isa-lyon.fr}
+\homepage{https://flblanc.github.io}
+
+\begin{document}
+
+\makecvheader[C]
+
+\input{resume/interests.tex}
+\input{resume/experience.tex}
+\input{resume/collective.tex}
+\input{resume/education.tex}
+\input{resume/skills.tex}
+\input{resume/teaching.tex}
+\input{resume/publications.tex}
+\input{resume/communications.tex}
+
+\end{document}

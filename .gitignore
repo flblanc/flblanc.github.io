@@ -5,3 +5,10 @@ _site/
 .bundle/
 vendor/
 Gemfile.lock
+
+# LaTeX CV build files (the PDF is published as files/FlorianBlanc_CV.pdf)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.pdf
+cv/*.zip
