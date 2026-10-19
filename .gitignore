@@ -13,3 +13,6 @@ cv/*.out
 cv/*.pdf
 cv/*.zip
 cv/generated/
+
+# Python bytecode (tools/build_cv.py imports tools/build_publications.py)
+__pycache__/

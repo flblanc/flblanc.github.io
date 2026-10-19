@@ -1,14 +1,20 @@
 name: Build CV PDF
 
-# Runs when the CV sources change (LaTeX in cv/, data in _data/cv/, or the generator),
-# generates cv/generated/*.tex, compiles cv/resume.tex with XeLaTeX and commits the
-# result back to the branch as files/FlorianBlanc_CV.pdf.
+# Runs when the CV sources change (LaTeX in cv/, data in _data/cv/, the publication
+# sources, or the generators), generates cv/generated/*.tex, compiles cv/resume.tex with
+# XeLaTeX and commits the result back to the branch as files/FlorianBlanc_CV.pdf.
+# The publication pages are regenerated here too: the "Regenerate publication pages"
+# Action pushes with GITHUB_TOKEN, which does not trigger this workflow.
 on:
   push:
     paths:
       - "cv/**"
       - "_data/cv/**"
       - "tools/build_cv.py"
+      - "_bibliography/MyPublications.bib"
+      - "_data/pub_extras.yml"
+      - "tools/build_publications.py"
+      - "_pages/publications.md"
       - ".github/workflows/cv.yml"
   workflow_dispatch:
 
@@ -34,12 +40,16 @@ jobs:
             fonts-font-awesome python3-yaml
           # fonts-font-awesome is only "recommended" by texlive-fonts-extra; fontawesome.sty needs it
       - name: Generate data-driven sections
-        run: python3 tools/build_cv.py
+        run: |
+          python3 tools/build_publications.py
+          python3 tools/build_cv.py
       - name: Compile
         working-directory: cv
         run: |
           # Fixed dates make the PDF reproducible, so unchanged sources give an unchanged file
-          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct -- . ../_data/cv ../tools/build_cv.py) FORCE_SOURCE_DATE=1
+          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct -- . ../_data/cv ../tools/build_cv.py \
+            ../_bibliography/MyPublications.bib ../_data/pub_extras.yml ../tools/build_publications.py \
+            ../_pages/publications.md) FORCE_SOURCE_DATE=1
           xelatex -interaction=nonstopmode -halt-on-error resume.tex
           cp resume.pdf ../files/FlorianBlanc_CV.pdf
       - name: Commit PDF

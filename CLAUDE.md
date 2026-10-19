@@ -47,4 +47,6 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
   hand-written sections are LaTeX in `cv/` (Awesome-CV, XeLaTeX; excluded from Jekyll). The "Build CV PDF"
   Action generates, compiles and commits `files/FlorianBlanc_CV.pdf`; do not commit that PDF by hand.
   Local check: `python3 tools/build_cv.py && (cd cv && xelatex resume.tex)` (output `cv/resume.pdf`, ignored).
+  The PDF's publication list is generated from `_publications/*.md` (same source as the website), with the
+  trainee legend from `_pages/publications.md`.
 - Navigation: `_data/navigation.yml`. Sidebar: `author:` block in `_config.yml`.

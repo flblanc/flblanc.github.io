@@ -34,6 +34,9 @@
 
 \usepackage{chemformula}
 
+% Fallback for symbols missing from the body font (the trainee mark in the publication list)
+\newfontfamily\symbolfont{DejaVuSans.ttf}
+
 \name{Florian E. C.}{Blanc, PhD}
 \position{CNRS Research Scientist in computational molecular biophysics}
 
@@ -52,7 +55,7 @@
 \input{generated/education.tex}
 \input{generated/skills.tex}
 \input{resume/teaching.tex}
-\input{resume/publications.tex}
+\input{generated/publications.tex}
 \input{resume/communications.tex}
 
 \end{document}
