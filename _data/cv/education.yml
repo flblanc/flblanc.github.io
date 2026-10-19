@@ -1,0 +1,45 @@
+# Education, newest first. Single source for /cv/ (Education) and the PDF CV
+# (tools/build_cv.py -> cv/generated/education.tex).
+#
+# Fields:
+#   title, organization, location, dates
+#   description   one line under the entry (PDF only)
+#   web           false to leave the entry off the web CV (it stays in the PDF)
+#   hide          true to leave the entry out of both
+# The web CV shows "**title**, organization, <last word of dates>".
+# Text may use **bold**, *italic* and [link](url).
+
+- title: PhD in Theoretical and Computational Chemistry
+  organization: Institut de Sciences et d'Ingénierie Supramoléculaires / Université de Strasbourg / Institut Curie
+  location: Strasbourg and Paris, France
+  dates: September 2014 - September 2018
+  description: Highest rating ("exceptional") on all evaluation criteria.
+
+- title: MSc in Bioinformatics
+  organization: Université Paris-Diderot
+  location: Paris, France
+  dates: September 2013 - June 2014
+  description: With high honours.
+
+- title: École Normale Supérieure Diploma in Biology (major) and Physics (minor)
+  organization: "[École Normale Supérieure (ENS)](https://www.ens.fr/en)"
+  location: Paris, France
+  dates: September 2010 - June 2014
+
+- title: Admission to ENS - Biology Department
+  organization: "Nationwide competitive entrance evaluation - rank: 1. Admitted to ENS with the status of paid civil servant (élève-normalien)."
+  dates: July 2010
+  web: false
+
+- title: Classes Préparatoires BCPST
+  organization: Preparatory classes for nationwide competitive admission exams to French "Grandes Écoles" - 2-year intensive training in biology, chemistry, physics, Earth sciences and mathematics
+  location: Marseille, France
+  dates: September 2008 - June 2010
+  web: false
+
+- title: Baccalauréat Scientifique
+  organization: French High-School diploma, scientific specialization
+  location: Toulon, France
+  dates: June 2008
+  description: With highest honours.
+  web: false

@@ -39,7 +39,7 @@ def tex(s):
 def cventry(e):
     items = "".join(f"            \\item {tex(i)}\n" for i in e.get("items", []))
     body = ("\n        \\begin{cvitems}\n" + items +
-            "            \\vspace{\\cvvertspace}\n        \\end{cvitems}\n") if items else ""
+            "            \\vspace{\\cvvertspace}\n        \\end{cvitems}\n") if items else tex(e.get("description", ""))
     return (f"\\cventry\n    {{{tex(e.get('organization', ''))}}}\n    {{{tex(e.get('title', ''))}}}\n"
             f"    {{{tex(e.get('location', ''))}}}\n    {{{tex(e.get('dates', ''))}}}\n    {{{body}}}%\n")
 
@@ -55,7 +55,13 @@ def experience(entries):
     return "".join(out)
 
 
-SECTIONS = {"experience": experience}
+def education(entries):
+    shown = [e for e in entries if not e.get("hide")]
+    return ("\\cvsection{Education}\n\\begin{cventries}%\n" +
+            "\\vspace{\\cvvertspace}%\n".join(cventry(e) for e in shown) + "\\end{cventries}\n")
+
+
+SECTIONS = {"experience": experience, "education": education}
 
 
 def main():
