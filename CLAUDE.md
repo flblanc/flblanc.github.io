@@ -42,7 +42,9 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
 - Team: one file per person in `_team/` (template: `_team/_template.md`), rendered on `/team/` and in
   the CV's Supervision section via `_includes/team-compact.html`.
 - Teaching: `_teaching/`, rendered in the CV's Teaching section; `/teaching/` redirects to `/cv/#teaching`.
-- CV PDF: LaTeX sources in `cv/` (Awesome-CV, XeLaTeX; excluded from Jekyll). The "Build CV PDF" Action
-  compiles `cv/resume.tex` on push and commits `files/FlorianBlanc_CV.pdf`; do not commit that PDF by hand.
-  Local check: `cd cv && xelatex resume.tex` (output `cv/resume.pdf` is git-ignored).
+- CV: `_data/cv/*.yml` is the single source for sections shared by the web CV (`_pages/cv.md`, Liquid)
+  and the PDF (`tools/build_cv.py` writes git-ignored `cv/generated/*.tex`). Layout and the remaining
+  hand-written sections are LaTeX in `cv/` (Awesome-CV, XeLaTeX; excluded from Jekyll). The "Build CV PDF"
+  Action generates, compiles and commits `files/FlorianBlanc_CV.pdf`; do not commit that PDF by hand.
+  Local check: `python3 tools/build_cv.py && (cd cv && xelatex resume.tex)` (output `cv/resume.pdf`, ignored).
 - Navigation: `_data/navigation.yml`. Sidebar: `author:` block in `_config.yml`.

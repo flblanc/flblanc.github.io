@@ -1,0 +1,93 @@
+# Experience, newest first. Single source for /cv/ (Experience) and the PDF CV
+# (tools/build_cv.py -> cv/generated/experience.tex).
+#
+# Fields:
+#   group         current | research  (PDF section "Current position" or "Research experience")
+#   title, organization, location, dates
+#   items         bullet lines
+#   hide          true to leave the entry out of both
+# Text may use **bold**, *italic* and [link](url).
+
+- group: current
+  title: CNRS Research Scientist
+  organization: Biophysics of Complex Systems team - Institut des Sciences Analytiques
+  location: Villeurbanne (Lyon), France
+  dates: Since October 2024
+  items:
+    - Permanent independent position.
+
+- group: research
+  title: Post-doctoral researcher
+  organization: Biophysics of Complex Systems team - Institut des Sciences Analytiques
+  location: Villeurbanne (Lyon), France
+  dates: September 2023 - September 2024
+  items:
+    - Integrative molecular modelling of bacterial silver-resistance proteins
+    - "Advisors: Olivier Walker, Maggy Hologne"
+
+- group: research
+  title: Post-doctoral researcher
+  organization: Department of Theoretical Biophysics - Max-Planck Institute of Biophysics
+  location: Frankfurt am Main, Germany
+  dates: May 2019 - August 2023
+  items:
+    - Computational study of ATPase molecular machines
+    - "Advisor: Gerhard Hummer"
+
+- group: research
+  title: Post-doctoral researcher
+  organization: Molecular Function and Design team - Université de Strasbourg
+  location: Strasbourg, France
+  dates: October 2018 - March 2019
+  items:
+    - Free energy simulations of biological and synthetic molecular machines
+    - "Advisor: Marco Cecchini"
+
+- group: research
+  title: PhD candidate
+  organization: Molecular Function and Design team - Université de Strasbourg; Structural Motility team - Institut Curie
+  location: Strasbourg and Paris, France
+  dates: September 2014 - September 2018
+  items:
+    - Exploring chemo-mechanical transduction in the myosin molecular motor through computer simulations
+    - "Advisors: Marco Cecchini, Anne Houdusse"
+
+- group: research
+  title: Research intern
+  organization: Chemistry and Biology, Nucleo(s)tides & Immunology for Therapy (CBNIT) team, Université Paris-Descartes
+  location: Paris, France
+  dates: January 2014 - June 2014
+  hide: true
+  items:
+    - Computational study of the bacterial transferase FemX
+    - "Advisors: Nohad Gresh, Mélanie Éthève-Quelquejeu"
+
+- group: research
+  title: Research intern
+  organization: Molecular Function and Design team, Institut de Sciences et d'Ingénierie Supramoléculaires (ISIS)
+  location: Strasbourg, France
+  dates: July 2013 - August 2013
+  hide: true
+  items:
+    - Computational study of the recovery stroke of myosin VI
+    - "Advisor: Marco Cecchini"
+
+- group: research
+  title: Research intern
+  organization: Dynamics of Structures and Interactions of Biological Macromolecules (DSIMB) team, Institut National de la Transfusion Sanguine
+  location: Paris, France
+  dates: February 2012 - June 2012
+  hide: true
+  items:
+    - Computational study of the urea transporter hUT-B
+    - "Advisor: Catherine Etchebest"
+
+- group: research
+  title: Research intern
+  organization: Structural Motility team, Institut Curie
+  location: Paris, France
+  dates: June 2011 - July 2011
+  hide: true
+  items:
+    - Crystallographic study of the motor domain of myosin X
+    - "Advisors: Anne Houdusse, Tatiana Isabet, Virginie Ropars"

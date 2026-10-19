@@ -12,3 +12,4 @@ cv/*.log
 cv/*.out
 cv/*.pdf
 cv/*.zip
+cv/generated/
