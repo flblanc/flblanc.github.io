@@ -62,7 +62,7 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 {% assign courses = site.teaching | sort: "date" | reverse %}
 <ul>
 {% for course in courses %}
-  <li><a href="{{ course.url }}">{{ course.title }}</a>, {{ course.type }}, <i>{{ course.venue }}</i>, {{ course.date | date: "%Y" }}</li>
+  <li><a href="{{ course.url }}">{{ course.title }}</a>{% if course.title_en %} ({{ course.title_en }}){% endif %}, {{ course.type }}, <i>{{ course.venue }}</i>, {% if course.dates %}{{ course.dates }}{% else %}{{ course.date | date: "%Y" }}{% endif %}</li>
 {% endfor %}
 </ul>
 

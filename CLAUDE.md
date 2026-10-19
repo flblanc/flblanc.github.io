@@ -41,7 +41,11 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
   Edit the .bib or `pub_extras.yml`, never `_publications/`. Pull before editing: the Action commits back.
 - Team: one file per person in `_team/` (template: `_team/_template.md`), rendered on `/team/` and in
   the CV's Supervision section via `_includes/team-compact.html`.
-- Teaching: `_teaching/`, rendered in the CV's Teaching section; `/teaching/` redirects to `/cv/#teaching`.
+- Teaching: `_teaching/` (one file per course, with its own detail page), rendered in the web CV's Teaching
+  section and, via `tools/build_cv.py`, in the PDF; `dates`, `items` (role bullets) and `title_en` are shown
+  in both. `/teaching/` redirects to `/cv/#teaching`.
+- Talks: `_data/talks.yml` (invited, oral, poster), rendered on `/talks/` (not in the menu), in the web CV's
+  Invited talks, and in the PDF's Communications section.
 - CV: `_data/cv/*.yml` is the single source for sections shared by the web CV (`_pages/cv.md`, Liquid)
   and the PDF (`tools/build_cv.py` writes git-ignored `cv/generated/*.tex`). Layout and the remaining
   hand-written sections are LaTeX in `cv/` (Awesome-CV, XeLaTeX; excluded from Jekyll). The "Build CV PDF"

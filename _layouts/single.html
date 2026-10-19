@@ -35,7 +35,9 @@ layout: default
         {% endif %}
         
         {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          {% if page.title_en %}<p><em>({{ page.title_en }})</em></p>{% endif %}
+          <p> {{ page.type }}, <i>{{ page.venue }}</i>{% if page.location %}, {{ page.location }}{% endif %}, {% if page.dates %}{{ page.dates }}{% else %}{{ page.date | default: "1900-01-01" | date: "%Y" }}{% endif %} </p>
+          {% if page.items %}<ul>{% for item in page.items %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ul>{% endif %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}

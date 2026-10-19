@@ -11,6 +11,7 @@ on:
       - "cv/**"
       - "_data/cv/**"
       - "_data/talks.yml"
+      - "_teaching/**"
       - "tools/build_cv.py"
       - "_bibliography/MyPublications.bib"
       - "_data/pub_extras.yml"
@@ -48,7 +49,7 @@ jobs:
         working-directory: cv
         run: |
           # Fixed dates make the PDF reproducible, so unchanged sources give an unchanged file
-          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct -- . ../_data/cv ../_data/talks.yml ../tools/build_cv.py \
+          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct -- . ../_data/cv ../_data/talks.yml ../_teaching ../tools/build_cv.py \
             ../_bibliography/MyPublications.bib ../_data/pub_extras.yml ../tools/build_publications.py \
             ../_pages/publications.md) FORCE_SOURCE_DATE=1
           xelatex -interaction=nonstopmode -halt-on-error resume.tex
