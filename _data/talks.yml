@@ -1,0 +1,49 @@
+# Talks, newest first. Rendered on /talks/ and in the CV's "Invited talks" section
+# (_includes/talks-list.html).
+#
+# Fields:
+#   kind      invited (only kind so far)
+#   label     e.g. "Invited seminar"
+#   title     talk title (optional)
+#   venue     event or institution
+#   location  city (optional)
+#   date      e.g. "March 2026"
+#   host      who invited you (optional)
+# Text may use **bold**, *italic* and [link](url).
+
+- kind: invited
+  label: Invited speaker
+  title: Unveiling functional mechanisms of ATPase proteins with enhanced sampling simulations
+  venue: CECAM Workshop "Integrative and Multiscale Modelling Approaches to Illuminate CryoEM/ET data"
+  location: Toulouse
+  date: March 2026
+
+- kind: invited
+  label: Invited seminar
+  title: Unveiling Complex Biomolecular Processes with Enhanced Sampling Molecular Dynamics
+  venue: Centre de RMN à Très Hauts Champs (CRMN)
+  location: Lyon
+  date: November 2025
+  host: Anne Lesage
+
+- kind: invited
+  label: Invited seminar
+  title: Revealing complex biomolecular processes with enhanced sampling Molecular Dynamics simulations
+  venue: Department of Chemistry, ENS Lyon
+  date: July 2025
+  host: Natacha Gillet
+
+- kind: invited
+  label: Invited seminar
+  title: Exploring the functional mechanisms of biomolecular machines with atomically-detailed simulations
+  venue: Laboratoire de Biologie et Modélisation de la Cellule (LBMC), ENS Lyon
+  date: November 2023
+  host: Riccardo Pellarin
+
+- kind: invited
+  label: Invited seminar
+  title: Exploring the function of molecular machines with simulations
+  venue: Institut des Sciences Analytiques
+  location: Villeurbanne
+  date: November 2021
+  host: Olivier Walker

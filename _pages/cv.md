@@ -59,7 +59,8 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
 # Invited talks
 
-<!-- TEXT: invited talks -->
+{% comment %}Generated from _data/talks.yml (also shown on /talks/){% endcomment %}
+{% include talks-list.html kind="invited" %}
 
 # Reviewing
 
