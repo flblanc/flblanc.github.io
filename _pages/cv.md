@@ -11,6 +11,11 @@ redirect_from:
 
 Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 
+# Research interests
+
+{% comment %}Generated from _data/cv/interests.yml (also used for the PDF CV){% endcomment %}
+{{ site.data.cv.interests | join: ", " }}
+
 # Education
 
 {% comment %}Generated from _data/cv/education.yml (also used for the PDF CV){% endcomment %}
@@ -72,3 +77,10 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
   * {{ item }}
 {%- endfor %}
 {%- endunless %}{% endfor %}
+
+# Skills
+
+{% comment %}Generated from _data/cv/skills.yml (also used for the PDF CV){% endcomment %}
+{% for e in site.data.cv.skills %}
+* **{{ e.type }}**: {{ e.skills }}
+{%- endfor %}

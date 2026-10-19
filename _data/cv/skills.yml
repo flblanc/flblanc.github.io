@@ -1,0 +1,13 @@
+# Skills, in display order. Single source for /cv/ and the PDF CV
+# (tools/build_cv.py -> cv/generated/skills.tex).
+# Fields: type, skills. Text may use **bold**, *italic* and [link](url).
+- type: Communication
+  skills: Oral and written scientific communication
+- type: Languages
+  skills: French (native), English (fluent), German (A1.2)
+- type: Programming
+  skills: Python/SciPy, bash, Fortran 90 (basic knowledge), Tcl (basic knowledge)
+- type: Molecular Simulations
+  skills: Molecular Dynamics, free energy calculations, enhanced sampling, quantum chemistry
+- type: Machine Learning
+  skills: Generative deep learning, dimensionality reduction, clustering

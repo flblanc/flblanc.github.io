@@ -1,0 +1,8 @@
+# Research interests, in display order. Single source for /cv/ and the PDF CV
+# (tools/build_cv.py -> cv/generated/interests.tex, where each item is kept on one line).
+- Protein dynamics
+- molecular machines & motors
+- integrative MD simulations
+- free energy calculations
+- machine learning
+- statistical mechanics
