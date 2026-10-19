@@ -27,7 +27,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            texlive-xetex texlive-latex-extra texlive-science texlive-fonts-extra
+            texlive-xetex texlive-latex-extra texlive-science texlive-fonts-extra \
+            fonts-font-awesome  # only "recommended" by texlive-fonts-extra; fontawesome.sty needs it
       - name: Compile
         working-directory: cv
         run: |
