@@ -5,9 +5,9 @@ permalink: /team/
 author_profile: true
 # TEXT: optional page description (used by search engines)
 # TEXT: block headings; leave empty to hide a heading
-current_heading: ""
-open_heading: ""
-past_heading: ""
+current_heading: "Current"
+open_heading: "Open positions"
+past_heading: "Former trainees"
 projects_heading: "Student project supervision"
 ---
 
