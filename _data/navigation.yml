@@ -6,18 +6,17 @@ main:
   - title: "Team"
     url: /team/
 
-  - title: "Open Positions"
-    url: /open-positions/
-    
-    
-  #- title: "Gallery"
-  #  url: /gallery/
-        
- # - title: "Blog"
- #   url: /year-archive/
-    
   - title: "CV"
     url: /cv/
 
   - title: "Datasets"
-    url: /datasets/ 
+    url: /datasets/
+
+  - title: "Open Positions"
+    url: /open-positions/
+
+  #- title: "Gallery"
+  #  url: /gallery/
+
+ # - title: "Blog"
+ #   url: /year-archive/
