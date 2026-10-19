@@ -4,9 +4,15 @@ title: "Publications"
 description: "Publications by Florian Blanc on molecular dynamics, ATP synthase, myosin and integrative structural biology."
 permalink: /publications/
 author_profile: true
+# Legend for the trainee mark; the symbol is TRAINEE_MARK in tools/build_publications.py. Shown only when filled.
+trainee_legend: "Trainee under my supervision"
 ---
 
 <link rel="stylesheet" href="/assets/css/publications.css">
+
+{% if page.trainee_legend != "" %}
+<p class="publication-legend">☉ {{ page.trainee_legend }}</p>
+{% endif %}
 
 {% for post in site.publications reversed %}
 <div class="publication-card">

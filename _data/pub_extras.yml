@@ -6,6 +6,7 @@
 #   summary             personal summary shown on the publications page
 #   equal_contribution  number of leading authors flagged as equal contributors (*)
 #   corresponding       list of author surnames flagged "(corr.)"
+#   trainees            list of author surnames flagged as my trainees (mark: TRAINEE_MARK in the script)
 #   paperurl            link to use instead of https://doi.org/<doi>
 #   title, venue, date  override the Zotero value (date: YYYY-MM-DD)
 #   slug                keep an older URL / image / PDF filename (default: the key)
@@ -21,6 +22,8 @@ blancMechanismAg+InducedFolding2026:
   corresponding:
   - Blanc
   - Walker
+  trainees:
+  - Demontrond
   slug: blancMechanismAginducedFolding2026
   summary: We use a custom bonded model and replica-exchange simulations to look at how Ag+ binding promotes the folding of an 11-residue peptide into an $\alpha$-helix. We train an autoencoder neural network to map the folding landscape. There is even some NMR and Mass Spec in there.
   title: Mechanism of Ag<sup>+</sup>-Induced Folding of a Bacterial Peptide from Replica-Exchange Molecular Simulations
