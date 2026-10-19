@@ -6,7 +6,7 @@ start: "2026-02"
 stages:
   - level: "PhD student, Institut des Sciences Analytiques (ISA) / Université Claude Bernard Lyon 1"
     dates: "since October 2026"
-    topic: ""
+    topic: "Molecular mechanisms of Myosin 18 regulatory functions from molecular simulations"
     role: "Main supervisor"
     co_supervisors: "Olivier Walker"
     funding: "ANR MyoAssemble"
