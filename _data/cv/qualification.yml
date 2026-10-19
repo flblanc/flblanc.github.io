@@ -1,4 +1,4 @@
-# Qualification, one line each. Single source for /cv/ (Qualification) and the PDF CV
+# Qualification, one line each. Single source for /cv/ and the PDF CV (top of the Teaching section in both)
 # (tools/build_cv.py -> cv/generated/qualification.tex, at the top of "Teaching duties").
 # Text may use **bold**, *italic* and [link](url).
 - "**Qualification Universitaire** (2020-2028) in Sections 31 (Theoretical, Physical, Analytical Chemistry) and 64 (Biochemistry, Molecular Biology)"

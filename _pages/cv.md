@@ -22,13 +22,6 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 {% for e in site.data.cv.education %}{% unless e.hide or e.web == false %}
 * **{{ e.title }}**, {{ e.organization }}, {{ e.dates | split: " " | last }}{% endunless %}{% endfor %}
 
-# Qualification
-
-{% comment %}Generated from _data/cv/qualification.yml (also used for the PDF CV){% endcomment %}
-{% for line in site.data.cv.qualification %}
-* {{ line }}
-{%- endfor %}
-
 # Experience
 
 {% comment %}Generated from _data/cv/experience.yml (also used for the PDF CV){% endcomment %}
@@ -62,6 +55,11 @@ Download my detailed CV [here](/files/FlorianBlanc_CV.pdf).
 {% endif %}
 
 # Teaching
+
+{% comment %}Generated from _data/cv/qualification.yml (also used for the PDF CV){% endcomment %}
+{% for line in site.data.cv.qualification %}
+{{ line }}
+{% endfor %}
 
 <!-- TEXT: optional intro; the list below is generated from _teaching/ -->
 
