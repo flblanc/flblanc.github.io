@@ -1,0 +1,49 @@
+name: Build CV PDF
+
+# Runs when the LaTeX CV sources change, compiles cv/resume.tex with XeLaTeX
+# and commits the result back to the branch as files/FlorianBlanc_CV.pdf.
+on:
+  push:
+    paths:
+      - "cv/**"
+      - ".github/workflows/cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cv
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # for the date of the last cv/ commit
+      - name: Install TeX Live (XeLaTeX and the fonts/packages the class needs)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-latex-extra texlive-science texlive-fonts-extra
+      - name: Compile
+        working-directory: cv
+        run: |
+          # Fixed dates make the PDF reproducible, so unchanged sources give an unchanged file
+          export SOURCE_DATE_EPOCH=$(git log -1 --format=%ct -- .) FORCE_SOURCE_DATE=1
+          xelatex -interaction=nonstopmode -halt-on-error resume.tex
+          cp resume.pdf ../files/FlorianBlanc_CV.pdf
+      - name: Commit PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add files/FlorianBlanc_CV.pdf
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Build CV PDF"
+            git pull --rebase
+            git push
+          fi
