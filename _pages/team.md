@@ -4,7 +4,7 @@ title: "Team"
 permalink: /team/
 author_profile: true
 # TEXT: optional page description (used by search engines)
-# TEXT: block headings; leave empty to hide a heading
+# Block headings; leave empty to hide a heading. projects_heading is also used in the CV (web and PDF).
 current_heading: "Current"
 open_heading: "Open positions"
 past_heading: "Former trainees"
