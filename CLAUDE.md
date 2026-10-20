@@ -53,4 +53,11 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
   Local check: `python3 tools/build_cv.py && (cd cv && xelatex resume.tex)` (output `cv/resume.pdf`, ignored).
   The PDF's publication list is generated from `_publications/*.md` (same source as the website), with the
   trainee legend from `_pages/publications.md`.
+- Rare Events (personal blog): posts in `_posts/` (drafts in `_drafts/`, preview with `jekyll serve --drafts`),
+  layout `_layouts/post.html` (`kind: essay | book-notes`, `disclaimer`, book fields), URLs `/rare-events/:year/:title/`.
+  Index `_pages/rare-events.md`, tags `_pages/rare-events-tags.md`; nav entry commented out until launch. Keep posts
+  off professional pages. New posts: copy `_drafts/_template-*.md`, or convert an Obsidian note with
+  `python3 tools/obsidian2post.py NOTE.md _drafts --kind book-notes [--bib FILE.bib]` (wiki-links → plain text,
+  citekeys → numbered citations + `## References`, inline `$x$` → `$$x$$`). Posts in `_posts/` go into `feed.xml`:
+  the owner has not yet decided whether they should (ask before the first post is published).
 - Navigation: `_data/navigation.yml`. Sidebar: `author:` block in `_config.yml`.
