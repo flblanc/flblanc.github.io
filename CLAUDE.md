@@ -58,7 +58,8 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
   "Rare Events posts" Action on push) writes `_drafts/slug.md`, or `_posts/DATE-slug.md` when the note has
   `publish: true` + `date`; generated files carry `source_note:` and are never edited by hand (pull before editing:
   the Action commits back). Conversion: wiki-links → plain text, citekeys → numbered citations + `## References`,
-  inline `$x$` → `$$x$$`. Layout `_layouts/post.html` (`kind: essay | book-notes`, `disclaimer`, book fields), URLs
+  inline `$x$` → `$$x$$`, `#Tags` in the text → `tags:` (kept with `#`, case-sensitive; tag-only lines at the top
+  removed, other tags left in the text). Layout `_layouts/post.html` (`kind: essay | book-notes`, `disclaimer`, book fields), URLs
   `/rare-events/:year/:title/`; preview drafts with `jekyll serve --drafts`. Index `_pages/rare-events.md`, tags
   `_pages/rare-events-tags.md`; nav entry commented out until launch. Keep posts off professional pages.
   No RSS/Atom feed (jekyll-feed removed on purpose; do not re-add).

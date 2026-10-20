@@ -3,6 +3,8 @@
 # "Rare Events posts" Action); edit the notes, never the generated files.
 #   front matter: the note's Properties, passed through (title defaults to the filename,
 #     kind to essay); publish: true + date -> _posts/DATE-slug.md, otherwise _drafts/slug.md
+#   #Tags in the text (and any tags: property) -> tags: ["#Tag", ...], case kept; tags-only
+#     lines at the top of the note are removed, tags elsewhere stay in the text
 #   [[Name]], [[Name|alias]], [[Note#Section]] -> plain text as Obsidian displays it
 #   [[citekey]] (lowercase surname + Words + year) -> numbered citation linked to ## References,
 #     resolved from _notes/blog-posts.bib
@@ -10,12 +12,13 @@
 # Generated files carry `source_note:`; those whose note is gone or moved are deleted.
 # usage: obsidian2post.py [NOTES_DIR]   (default: _notes next to tools/)
 
-import re, sys, unicodedata
+import json, re, sys, unicodedata
 from pathlib import Path
 
 CITEKEY = re.compile(r"[a-z][A-Za-z-]*[A-Z][A-Za-z]*\d{4}[a-z]?")
 WIKI = re.compile(r"(!?)\[\[([^\]\n]+)\]\]")
 CITE_RUN = re.compile(r"\[\[([^\]|#\n]+)(?:\|[^\]\n]*)?\]\](?:\s*[,;]?\s*\[\[([^\]|#\n]+)(?:\|[^\]\n]*)?\]\])*")
+TAG = re.compile(r"(?:(?<=\s)|^)#([\w/-]*[^\W\d_][\w/-]*)", re.M)
 CODE = re.compile(r"(```.*?```|~~~.*?~~~|`[^`\n]*`)", re.S)
 
 ACCENTS = {"'": "\u0301", "`": "\u0300", "^": "\u0302", '"': "\u0308", "~": "\u0303", "c": "\u0327", "v": "\u030c", "=": "\u0304"}
@@ -147,6 +150,24 @@ def rel(p, root):
     return p.relative_to(root).as_posix() if p.is_relative_to(root) else p.as_posix()
 
 
+def take_tags(front, body):
+    tags = []
+    m = re.search(r"^tags:[ \t]*(.*)\n((?:[ \t]+-.*\n)*)", front, re.M)
+    if m:
+        vals = re.findall(r"^[ \t]+-[ \t]*(.*)$", m.group(2), re.M) or m.group(1).strip("[]").split(",")
+        tags = ["#" + v.strip(" '\"").lstrip("#") for v in vals if v.strip(" '\"")]
+        front = front[:m.start()] + front[m.end():]
+    lines = body.split("\n")
+    while lines and (not lines[0].strip() or not TAG.sub("", lines[0]).strip()):
+        lines.pop(0)
+    for seg in CODE.split(body)[::2]:
+        tags += ["#" + t for t in TAG.findall(seg)]
+    tags = list(dict.fromkeys(tags))
+    if tags:
+        front += "tags: " + json.dumps(tags, ensure_ascii=False) + "\n"
+    return front, "\n".join(lines)
+
+
 def scalar(front, key):
     m = re.search(rf"^{key}:[ \t]*(.*?)[ \t]*$", front, re.M)
     return m.group(1).strip("'\"") if m else ""
@@ -154,9 +175,10 @@ def scalar(front, key):
 
 def build(note, bib, root):
     text = note.read_text(encoding="utf-8")
-    m = re.match(r"---\n(.*?\n)---[ \t]*\n", text, re.S)
+    m = re.match(r"---\n((?:.*?\n)?)---[ \t]*\n", text, re.S)
     front, body = (m.group(1), text[m.end():]) if m else ("", text)
     front = WIKI.sub(lambda w: display(*w.group(2).partition("|")[::2]) if "|" in w.group(2) else display(w.group(2), None), front)
+    front, body = take_tags(front, body)
     publish, date = scalar(front, "publish").lower() == "true", scalar(front, "date")[:10]
     front = re.sub(r"^(publish:.*|date:[ \t]*)\n", "", front, flags=re.M)
     if not scalar(front, "title"):
