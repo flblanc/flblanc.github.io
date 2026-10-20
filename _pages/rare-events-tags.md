@@ -10,7 +10,7 @@ author_profile: true
 
 {% assign tag_names = tag_names | sort_natural %}
 {% for tag in tag_names %}
-  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  <h2 id="tag-{{ tag | remove_first: '#' }}" class="archive__subtitle">{{ tag }}</h2>
   {% for post in site.tags[tag] %}
     {% include rare-events-item.html %}
   {% endfor %}
