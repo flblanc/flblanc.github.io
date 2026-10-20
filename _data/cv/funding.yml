@@ -3,7 +3,7 @@
 # Fields: title, role, dates, items (bullet lines, optional), hide (true: left out of both)
 # Text may use **bold**, *italic* and [link](url).
 
-- title: DARI/GENCI allocation
+- title: DARI/GENCI compute allocation
   role: PI
   dates: May 2026 - April 2027
 
