@@ -13,7 +13,7 @@
 import re, sys, unicodedata
 from pathlib import Path
 
-CITEKEY = re.compile(r"[a-z][A-Za-z]*[A-Z][A-Za-z]*\d{4}[a-z]?")
+CITEKEY = re.compile(r"[a-z][A-Za-z-]*[A-Z][A-Za-z]*\d{4}[a-z]?")
 WIKI = re.compile(r"(!?)\[\[([^\]\n]+)\]\]")
 CITE_RUN = re.compile(r"\[\[([^\]|#\n]+)(?:\|[^\]\n]*)?\]\](?:\s*[,;]?\s*\[\[([^\]|#\n]+)(?:\|[^\]\n]*)?\]\])*")
 CODE = re.compile(r"(```.*?```|~~~.*?~~~|`[^`\n]*`)", re.S)
