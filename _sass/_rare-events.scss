@@ -26,3 +26,11 @@
   font-size: $type-size-6;
   color: $gray;
 }
+
+.post-body {
+  p,
+  li {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
