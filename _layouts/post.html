@@ -20,7 +20,7 @@ layout: single
   {% if book_title != "" %}<p class="post-book__title"><cite>{{ book_title }}</cite></p>{% endif %}
   {% if book_authors != "" %}<p class="post-book__authors">{{ book_authors }}</p>{% endif %}
   {% if read_start != "" or read_end != "" %}
-  <p class="post-book__dates">{% if read_start != "" %}<time>{{ read_start }}</time>{% endif %} &ndash; {% if read_end != "" %}<time>{{ read_end }}</time>{% endif %}</p>
+  <p class="post-book__dates">{% if read_start != "" and read_end != "" %}Read from <time>{{ read_start }}</time> to <time>{{ read_end }}</time>{% else %}{% if read_start != "" %}<time>{{ read_start }}</time>{% endif %} &ndash; {% if read_end != "" %}<time>{{ read_end }}</time>{% endif %}{% endif %}</p>
   {% endif %}
 </div>
 {% endif %}
