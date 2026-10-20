@@ -18,5 +18,6 @@ main:
   #- title: "Gallery"
   #  url: /gallery/
 
- # - title: "Blog"
- #   url: /year-archive/
+  # Rare Events: uncomment to launch
+  #- title: "Rare Events"
+  #  url: /rare-events/
