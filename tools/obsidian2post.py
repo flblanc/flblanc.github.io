@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-# Obsidian note -> Rare Events post.
+# Obsidian notes -> Rare Events posts. Converts every _notes/*.md (run locally or by the
+# "Rare Events posts" Action); edit the notes, never the generated files.
+#   front matter: the note's Properties, passed through (title defaults to the filename,
+#     kind to essay); publish: true + date -> _posts/DATE-slug.md, otherwise _drafts/slug.md
 #   [[Name]], [[Name|alias]], [[Note#Section]] -> plain text as Obsidian displays it
-#   [[citekey]] (lowercase surname + Words + year) -> numbered citation linked to ## References
-#   inline $x$ -> $$x$$ (kramdown math); blank lines around display $$ blocks
-# Front matter comes from _drafts/_template-<kind>.md, title from the note's filename.
-# usage: obsidian2post.py NOTE.md OUTDIR [--kind essay|book-notes] [--bib FILE.bib]
+#   [[citekey]] (lowercase surname + Words + year) -> numbered citation linked to ## References,
+#     resolved from _notes/blog-posts.bib
+#   inline $x$ -> $$x$$ (kramdown math); blank lines around display $$ blocks; other $ escaped
+# Generated files carry `source_note:`; those whose note is gone or moved are deleted.
+# usage: obsidian2post.py [NOTES_DIR]   (default: _notes next to tools/)
 
-import argparse, re, sys, unicodedata
+import re, sys, unicodedata
 from pathlib import Path
 
 CITEKEY = re.compile(r"[a-z][A-Za-z]*[A-Z][A-Za-z]*\d{4}[a-z]?")
@@ -139,30 +143,82 @@ def convert_text(text, bib):
     return text
 
 
+def rel(p, root):
+    return p.relative_to(root).as_posix() if p.is_relative_to(root) else p.as_posix()
+
+
+def scalar(front, key):
+    m = re.search(rf"^{key}:[ \t]*(.*?)[ \t]*$", front, re.M)
+    return m.group(1).strip("'\"") if m else ""
+
+
+def build(note, bib, root):
+    text = note.read_text(encoding="utf-8")
+    m = re.match(r"---\n(.*?\n)---[ \t]*\n", text, re.S)
+    front, body = (m.group(1), text[m.end():]) if m else ("", text)
+    front = WIKI.sub(lambda w: display(*w.group(2).partition("|")[::2]) if "|" in w.group(2) else display(w.group(2), None), front)
+    publish, date = scalar(front, "publish").lower() == "true", scalar(front, "date")[:10]
+    front = re.sub(r"^(publish:.*|date:[ \t]*)\n", "", front, flags=re.M)
+    if not scalar(front, "title"):
+        front = re.sub(r"^title:.*\n", "", front, flags=re.M)
+        front = 'title: "' + note.stem.replace("\\", "\\\\").replace('"', '\\"') + '"\n' + front
+    if not scalar(front, "kind"):
+        front = re.sub(r"^kind:.*\n", "", front, flags=re.M) + "kind: essay\n"
+    front += f'source_note: "{rel(note, root)}"\n'
+
+    slug = re.sub(r"[^a-z0-9]+", "-", unicodedata.normalize("NFKD", note.stem).encode("ascii", "ignore").decode().lower()).strip("-")
+    if publish:
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+            raise ValueError("publish: true needs date: YYYY-MM-DD")
+        out = root / "_posts" / f"{date}-{slug}.md"
+    else:
+        out = root / "_drafts" / f"{slug}.md"
+    return out, "---\n" + front + "---\n\n" + convert_text(body, bib).lstrip()
+
+
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("note", type=Path)
-    ap.add_argument("outdir", type=Path)
-    ap.add_argument("--kind", choices=["essay", "book-notes"], default="essay")
-    ap.add_argument("--bib", type=Path, help="default: NOTE with .bib extension, if it exists")
-    a = ap.parse_args()
-
-    bibfile = a.bib or a.note.with_suffix(".bib")
+    root = Path(__file__).resolve().parent.parent
+    notes = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else root / "_notes"
+    bibfile = notes / "blog-posts.bib"
     bib = parse_bib(bibfile.read_text(encoding="utf-8")) if bibfile.exists() else {}
-    if a.bib and not bib:
-        sys.exit(f"no entries read from {a.bib}")
 
-    template = (Path(__file__).resolve().parent.parent / "_drafts" / f"_template-{a.kind}.md").read_text(encoding="utf-8")
-    title = a.note.stem.replace("\\", "\\\\").replace('"', '\\"')
-    front = template.replace('title: ""', f'title: "{title}"', 1)
-    body = convert_text(a.note.read_text(encoding="utf-8"), bib)
+    old = {}
+    for f in [*(root / "_drafts").glob("*.md"), *(root / "_posts").glob("*.md")]:
+        m = re.search(r'^source_note: "(.*)"$', f.read_text(encoding="utf-8"), re.M)
+        if m:
+            old.setdefault(m.group(1), []).append(f)
 
-    slug = re.sub(r"[^a-z0-9]+", "-", unicodedata.normalize("NFKD", a.note.stem).encode("ascii", "ignore").decode().lower()).strip("-")
-    out = a.outdir / f"{slug}.md"
-    if out.exists():
-        sys.exit(f"{out} exists")
-    out.write_text(front.rstrip() + "\n\n" + body.lstrip(), encoding="utf-8")
-    print(out)
+    written, failed = set(), set()
+    for note in sorted(notes.glob("*.md")):
+        if note.name.startswith("_"):
+            continue
+        src = rel(note, root)
+        try:
+            out, text = build(note, bib, root)
+        except (ValueError, SystemExit) as e:
+            print(f"{src}: {e}", file=sys.stderr)
+            failed.add(src)
+            continue
+        if out in written:
+            print(f"{src}: {out.name} already written by another note", file=sys.stderr)
+            failed.add(src)
+            continue
+        if out.exists() and out not in old.get(src, []):
+            print(f"{src}: {out.relative_to(root)} exists and was not generated from this note", file=sys.stderr)
+            failed.add(src)
+            continue
+        out.parent.mkdir(exist_ok=True)
+        if not out.exists() or out.read_text(encoding="utf-8") != text:
+            out.write_text(text, encoding="utf-8")
+            print(f"wrote {out.relative_to(root)}")
+        written.add(out)
+
+    for src, files in old.items():
+        for f in files:
+            if f not in written and src not in failed:
+                f.unlink()
+                print(f"removed {f.relative_to(root)}")
+    sys.exit(1 if failed else 0)
 
 
 if __name__ == "__main__":
