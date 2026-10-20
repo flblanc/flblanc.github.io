@@ -60,6 +60,6 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
   the Action commits back). Conversion: wiki-links → plain text, citekeys → numbered citations + `## References`,
   inline `$x$` → `$$x$$`. Layout `_layouts/post.html` (`kind: essay | book-notes`, `disclaimer`, book fields), URLs
   `/rare-events/:year/:title/`; preview drafts with `jekyll serve --drafts`. Index `_pages/rare-events.md`, tags
-  `_pages/rare-events-tags.md`; nav entry commented out until launch. Keep posts off professional pages. Posts in
-  `_posts/` go into `feed.xml`: the owner has not yet decided whether they should (ask before the first publish).
+  `_pages/rare-events-tags.md`; nav entry commented out until launch. Keep posts off professional pages.
+  No RSS/Atom feed (jekyll-feed removed on purpose; do not re-add).
 - Navigation: `_data/navigation.yml`. Sidebar: `author:` block in `_config.yml`.
