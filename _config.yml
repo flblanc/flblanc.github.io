@@ -185,12 +185,13 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: post
+      permalink: /rare-events/:year/:title/
       author_profile: true
       read_time: true
-      comments: true
-      share: true
-      related: true
+      comments: false
+      share: false
+      related: false
   # _pages
   - scope:
       path: ""

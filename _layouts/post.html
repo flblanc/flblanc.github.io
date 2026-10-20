@@ -1,0 +1,32 @@
+---
+layout: single
+---
+
+{% comment %}
+  Rare Events posts. `kind: book-notes` adds a header block (book_title, book_authors,
+  read_start, read_end; any may be blank, dates may be YYYY, YYYY-MM or YYYY-MM-DD).
+  `disclaimer` renders as an italic block with no label.
+{% endcomment %}
+
+{% capture book_title %}{{ page.book_title }}{% endcapture %}
+{% capture book_authors %}{{ page.book_authors | join: ", " }}{% endcapture %}
+{% capture read_start %}{{ page.read_start }}{% endcapture %}
+{% capture read_end %}{{ page.read_end }}{% endcapture %}
+{% capture disclaimer %}{{ page.disclaimer }}{% endcapture %}
+
+{% capture book_any %}{{ book_title }}{{ book_authors }}{{ read_start }}{{ read_end }}{% endcapture %}
+{% if page.kind == "book-notes" and book_any != "" %}
+<div class="post-book">
+  {% if book_title != "" %}<p class="post-book__title"><cite>{{ book_title }}</cite></p>{% endif %}
+  {% if book_authors != "" %}<p class="post-book__authors">{{ book_authors }}</p>{% endif %}
+  {% if read_start != "" or read_end != "" %}
+  <p class="post-book__dates">{% if read_start != "" %}<time>{{ read_start }}</time>{% endif %} &ndash; {% if read_end != "" %}<time>{{ read_end }}</time>{% endif %}</p>
+  {% endif %}
+</div>
+{% endif %}
+
+{% if disclaimer != "" %}
+<div class="post-disclaimer">{{ disclaimer | markdownify }}</div>
+{% endif %}
+
+{{ content }}

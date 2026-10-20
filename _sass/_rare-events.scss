@@ -1,0 +1,28 @@
+/* ==========================================================================
+   RARE EVENTS (blog posts, _layouts/post.html)
+   ========================================================================== */
+
+.post-disclaimer {
+  @include notice($light-gray);
+  font-style: italic;
+}
+
+.post-book {
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  border-left: 3px solid $light-gray;
+
+  p {
+    margin: 0 0 0.25em;
+  }
+}
+
+.post-book__title {
+  font-size: $type-size-4;
+}
+
+.post-book__authors,
+.post-book__dates {
+  font-size: $type-size-6;
+  color: $gray;
+}
