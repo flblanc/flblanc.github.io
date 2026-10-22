@@ -6,7 +6,12 @@ author_profile: true
 ---
 
 <!-- TEXT: short note identifying this section as personal writing -->
+Personal writings.
 
-{% for post in site.posts %}
-  {% include rare-events-item.html %}
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in posts_by_year %}
+  <h2 id="{{ year.name }}" class="archive__subtitle">{{ year.name }}</h2>
+  {% for post in year.items %}
+    {% include rare-events-item.html %}
+  {% endfor %}
 {% endfor %}
