@@ -1,7 +1,7 @@
 ---
 title: "Book notes --- _Scientific Reasoning: the Bayesian approach_"
-date: 
-publish: false
+date: 2026-10-22
+publish: true
 kind: book-notes
 book_title: "Scientific Reasoning: the Bayesian approach"
 book_authors: ["Colin Howson","Peter Urbach"]
