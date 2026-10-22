@@ -23,7 +23,9 @@ To do this, I combine:
  - **Experimental biophysics**  to connect my simulations to real-world measurements, thanks to top-notch collaborators in NMR, Cryo-EM and X-ray crystallography. 
 
 The systems I study range from short **peptides** to large **molecular machines** (myosin, ATP synthase), with the occasional venture into **supra-molecular chemistry**.  I’ve also worked on the SARS-CoV-2 spike protein in the early days of the Covid-19 pandemic, 
-helping to map its conformational dynamics and identify target sites for vaccines. More recently, I started to explore how **deep learning** can help us integrate experiments with simulations.
+helping to map its conformational dynamics and identify target sites for vaccines. 
+<!-- More recently, I started to explore how **deep learning** can help us integrate experiments with simulations.
+-->
 
 <!-- AT-A-GLANCE BLOCK: renders as a shaded box once filled and uncommented.
 TEXT: optional heading
@@ -42,7 +44,7 @@ Read my [advice for applicants](/application-advice/) to get an idea of what I e
 ## [News](/news/)
 
 <ul>
-{% for item in site.data.news limit:8 %}
+{% for item in site.data.news limit:5 %}
   <li>
     <strong>{{ item.date }}</strong> —
     {% if item.url %}

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "News"
-description: "News from Florian Blanc's research group."
+description: "News from Florian Blanc's research team."
 permalink: /news/
 author_profile: true
 ---
