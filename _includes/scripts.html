@@ -2,3 +2,19 @@
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
+
+<script>
+  // Open collapsed <details> blocks while printing, and restore them afterwards
+  window.addEventListener("beforeprint", function () {
+    document.querySelectorAll("details:not([open])").forEach(function (d) {
+      d.open = true;
+      d.dataset.printOpened = "";
+    });
+  });
+  window.addEventListener("afterprint", function () {
+    document.querySelectorAll("details[data-print-opened]").forEach(function (d) {
+      d.open = false;
+      delete d.dataset.printOpened;
+    });
+  });
+</script>

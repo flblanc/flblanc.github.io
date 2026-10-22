@@ -40,28 +40,41 @@ Typically, my research projects involve a combination of:
 - **Physical chemistry and physics**, especially **statistical mechanics**
 - **Machine learning and numerical methods** 
 
-You are not expected to know all these fields, but you should usually have at least some familiarity with two of them, and be willing to learn the third (How much familiarity depends on your academic level --- see below).
+You are not expected to know all these fields, but you should usually have at least some familiarity with two of them, and be willing to learn the third (How much familiarity depends on your academic level --- [see below](#expectations-by-academic-level)).
 
 ## A rough checklist
 Here are examples of questions relevant for the research I do. They are not formal requirements, but they give a reasonable idea of the expected background. During interviews, I may ask questions like these to understand how you think and what concepts you are already comfortable with.
 
-- **Biology / biochemistry**
-    - Cite a few examples of proteins and describe their biological roles
-    - Describe (verbally) what an $\alpha$-helix or a $\beta$-sheet looks like
-    - Explain the difference between folded and intrinsically disordered proteins
-    - Explain what ATP is and its main cellular role
+<details markdown="1">
+<summary><strong>Biology / biochemistry</strong></summary>
 
-- **Physical chemistry and physics**
-    - Write Newton’s second law and explain what it means physically 
-    - Explain qualitatively what temperature represents in statistical mechanics
-    - Write the Boltzmann distribution for a classical one-dimensional harmonic oscillator
-    - Explain qualitatively what a free-energy landscape represents
+- Cite a few examples of proteins and describe their biological roles
+- Describe (verbally) what an $\alpha$-helix or a $\beta$-sheet looks like
+- Explain the difference between folded and intrinsically disordered proteins
+- Explain what ATP is and its main cellular role
 
-- **Machine learning and mathematics**
-    - Explain the purpose and principle of principal component analysis (PCA)
-    - Solve a first-order linear differential equation such as $y' + ay = b$
-    - Explain the difference between training and testing data in machine learning
-    - Explain what an activation function is and why it is needed in deep learning
+</details>
+
+<details markdown="1">
+<summary><strong>Physical chemistry and physics</strong></summary>
+
+- Write Newton’s second law and explain what it means physically 
+- Explain qualitatively what temperature represents in statistical mechanics
+- Write the Boltzmann distribution for a classical one-dimensional harmonic oscillator
+- Explain qualitatively what a free-energy landscape represents
+
+</details>
+
+<details markdown="1">
+<summary><strong>Machine learning and mathematics</strong></summary>
+
+- Explain the purpose and principle of principal component analysis (PCA)
+- Solve a first-order linear differential equation such as $y' + ay = b$
+- Explain the difference between training and testing data in machine learning
+- Explain what an activation function is and why it is needed in deep learning
+
+</details>
+
 
 If nothing on this list is familiar to you, the research I do is probably not a good match for your current background.
 
@@ -75,10 +88,33 @@ Because the projects are computational, some amount of technical proficiency is 
 
 Prior experience with Molecular Dynamics simulations is helpful, but not mandatory for junior students. In any case, I care much more about whether somebody is capable of learning technical material than whether they already know a specific software package. Most technical skills can be acquired reasonably quickly if the underlying scientific motivation is there.
 
+# During the Internship
+
+## Environment
+You will have your own desk and workstation (with Ubuntu), and access to supercomputing resources. I am part of an interdisciplinary research group that mixes computational science with wet lab research in biochemistry and structural biology. So, you will have constant opportunities to interact with a broad range of scientists, including experimentalists, at all levels (from interns to Full Professors). Presence hours are flexible as long as progress is satisfactory.
+
+## Supervision
+I will personally supervise your work, possibly with assistance from an experienced student (M2/PhD student) or post-doctoral researcher. I am available for technical help, within reason; I expect you to seriously try on your own, but also not to spend more than a couple of days stuck on a technical problem, especially at the beginning of the project. We will have one-on-one ~1h update meetings every two weeks. Update meetings can be made more frequent if requested, or conversely can be dropped down to once a month if after a few weeks it is clear that you can stay on track. There are also semi-regular group meetings, where you are expected to present your results in a few slides. 
+
+
+## Scientific writing
+Scientists are largely judged on their scientific writings (publications, research proposals). Writing about one's research is also a great way to clarify one's ideas and scientific thinking. For these reasons, **I emphasize writing for all my students**. 
+
+To promote the habit of regular scientific writing, I will expect **monthly reports** and encourage you to start writing your official report/thesis on week 1. Monthly written progress reports (1-4 pages) should concisely describe the work done, problems encountered, the main findings (with figures), their discussion, and the next steps.
+
+Once you have a sufficiently advanced draft of an important piece (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity to **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
+
+## Large Language Models
+LLMs are transforming the way we do research. It's an exciting time. However, when it comes to writing, 
+**I urge you to use LLMs sparingly and never as a substitute for personal reflection**. Trying to edict strict rules would be pointless, but use your best, honest judgment. A good rule of thumb would be that *you generate, and you and possibly the LLM edit*. Feedback on your writing (from me or anyone else) will help you improve only if it is your work you are showing. Relying overly on an LLM would deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. 
+
+
 # Expectations by Academic Level
 My expectations increase with academic level. An M2 student applying for a six-month research internship is not evaluated by the same standards as an L3 student discovering research for the first time.
 
-## L3 / M1 Students (final-year Bachelor’s or first-year Master’s level)
+<details markdown="1">
+<summary>L3 / M1 Students (final-year Bachelor’s or first-year Master’s level)</summary>
+
 For L3/M1, I mainly look for scientific curiosity, seriousness, and the ability to learn progressively with guidance. 
 
 ### Typical internship: 
@@ -100,7 +136,12 @@ Advanced technical expertise is absolutely not expected at this stage.
 - Coarse-grained simulations of intrinsically disordered proteins
 - Machine-learning analysis of molecular conformational ensembles
 
-## M2 students (second-year Master's level)
+
+</details>
+
+<details markdown="1">
+<summary>M2 students (second-year Master's level)</summary>
+
 At this stage, students are expected to function as junior researchers rather than as students discovering the field for the first time. Accordingly, M2 internships are substantially more demanding and are usually designed to lead-up to a PhD project (but you do not have to commit to a PhD right away).  
 
 ### Typical internship
@@ -120,25 +161,8 @@ At this level, applicants are expected to have:
 ### Example projects
 - Enhanced-sampling molecular dynamics of gas-phase peptide oligomerization
 
-# During the Internship
 
-## Environment
-You will have your own desk and workstation (with Ubuntu), and access to supercomputing resources. I am part of an interdisciplinary research group that mixes computational science with wet lab research in biochemistry and structural biology. So, you will have constant opportunities to interact with a broad range of scientists, including experimentalists, at all levels (from interns to Full Professors). Presence hours are flexible as long as progress is satisfactory.
-
-## Supervision
-I will personally supervise your work, possibly with assistance from an experienced student (M2/PhD student) or post-doctoral researcher. I am available for technical help, within reason; I expect you to seriously try on your own, but also not to spend more than a couple of days stuck on a technical problem, especially at the beginning of the project. We will have one-on-one ~1h update meetings every two weeks. Update meetings can be made more frequent if requested, or conversely can be dropped down to once a month if after a few weeks it is clear that you can stay on track. There are also semi-regular group meetings, where you are expected to present your results in a few slides. 
-
-
-## Scientific writing
-Scientists are largely judged on their scientific writings (publications, research proposals). Writing about one's research is also a great way to clarify one's ideas and scientific thinking. For these reasons, **I emphasize writing for all my students**. 
-
-To promote the habit of regular scientific writing, I will expect **monthly reports** and encourage you to start writing your official report/thesis on week 1. Monthly written progress reports (1-4 pages) should concisely describe the work done, problems encountered, the main findings (with figures), their discussion, and the next steps.
-
-Once you have a sufficiently advanced draft of an important piece (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity to **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
-
-## Large Language Models
-LLMs are transforming the way we do research. It's an exciting time. However, when it comes to writing, 
-**I urge you to use LLMs sparingly and never as a substitute for personal reflection**. Trying to edict strict rules would be pointless, but use your best, honest judgment. A good rule of thumb would be that *you generate, and you and possibly the LLM edit*. Feedback on your writing (from me or anyone else) will help you improve only if it is your work you are showing. Relying overly on an LLM would deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. 
+</details>
 
 # How to apply
 With all that, if you feel like your profile, interests and expectations would fit with mine, you can contact me directly by <a href="mailto:florian&#46;blanc&#64;cnrs&#46;fr">e-mail</a> or apply to an [open position](/open-positions/). Include a description of your background, research interests, and career plans (no matter how vague). I look forward to it !
