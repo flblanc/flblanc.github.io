@@ -63,7 +63,7 @@ Here are examples of questions relevant for the research I do. They are not form
     - Explain the difference between training and testing data in machine learning
     - Explain what an activation function is and why it is needed in deep learning
 
-If basically nothing on this list is familiar to you, then the research I do and the projects I supervise are probably not a good match for your current background.
+If nothing on this list is familiar to you, the research I do is probably not a good match for your current background.
 
 # Expected technical / programming skills
 Because the projects are computational, some amount of technical proficiency is necessary in addition to broader disciplinary knowledge. Useful skills include:
@@ -76,13 +76,13 @@ Because the projects are computational, some amount of technical proficiency is 
 Prior experience with Molecular Dynamics simulations is helpful, but not mandatory for junior students. In any case, I care much more about whether somebody is capable of learning technical material than whether they already know a specific software package. Most technical skills can be acquired reasonably quickly if the underlying scientific motivation is there.
 
 # Expectations by Academic Level
-My expectations naturally increase with academic level. An M2 student applying for a six-month research internship is not evaluated by the same standards as an L3 student discovering research for the first time.
+My expectations increase with academic level. An M2 student applying for a six-month research internship is not evaluated by the same standards as an L3 student discovering research for the first time.
 
 ## L3 / M1 Students (final-year Bachelor’s or first-year Master’s level)
 For L3/M1, I mainly look for scientific curiosity, seriousness, and the ability to learn progressively with guidance. 
 
 ### Typical internship: 
-- **Project scope:** small scale, self-contained research project taylored to your skill level
+- **Project scope:** small scale, self-contained research project tailored to your skill level
 - **Duration:** 2-3 months; M1 students can apply for longer stays (up to 6 months)
 - **Compensation:** no compensation if the internship lasts less than 3 months, ~600€/month otherwise
 
@@ -108,10 +108,10 @@ At this stage, students are expected to function as junior researchers rather th
 - **Duration:** typically 6 months
 - **Compensation:** standard French M2 internship stipend (~600€/month)
 
-The level of independence expected is correspondingly higher. I do not expect you to know everything already, but I do expect you to progressively become capable of identifying problems, reading documentation and papers independently, debugging your own workflows, and presenting/discussing scientific results critically. 
+The level of independence is correspondingly higher. I do not expect you to know everything already, but I do expect you to progressively become capable of identifying problems, reading documentation and papers independently, debugging your own workflows, and presenting/discussing scientific results critically. 
 
 ### Expected background
-At this level, applicants are generally expected to have:
+At this level, applicants are expected to have:
 - reasonably strong programming skills (Python preferred)
 - familiarity with Linux and scientific-computing workflows,
 - prior exposure to molecular simulations, statistical mechanics, machine learning, or related computational methods
@@ -130,30 +130,15 @@ I will personally supervise your work, possibly with assistance from an experien
 
 
 ## Scientific writing
-For your work to be useful to other scientists (and even to future you), it is critical that you write about it and how you did it. In addition, I believe very strongly that **writing about one's research is the best way to clarify one's ideas and scientific thinking**. And, **professional scientists are largely judged on the quantity and quality of their scientific writing** (publications, research proposals). Scientific writing is therefore a **crucial skill**, yet it is often overlooked in academic training programs, especially before the PhD. For these reasons, **I place a particular emphasis on writing for all my students**. 
+Scientists are largely judged on their scientific writings (publications, research proposals). Writing about one's research is also a great way to clarify one's ideas and scientific thinking. For these reasons, **I emphasize writing for all my students**. 
 
 To promote the habit of regular scientific writing, I will expect **monthly reports** and encourage you to start writing your official report/thesis on week 1. Monthly written progress reports (1-4 pages) should concisely describe the work done, problems encountered, the main findings (with figures), their discussion, and the next steps.
 
-Once you have a sufficiently advanced draft of whatever important piece of writing you are supposed to deliver (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity to **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
+Once you have a sufficiently advanced draft of an important piece (thesis, research paper, etc), we will have **interactive feedback sessions** where we sit down and review your draft word by word together. These sessions are intense, but they are an exceptional opportunity to **refine your writing and thinking up to academic standards**. They will make you grow as a scientist and **you should actively seek them**. 
 
-## AI Chatbots
-**I urge you to use LLMs sparingly and never as a substitute for personal reflection**. I am aware this technology and its uses are evolving rapidly, which makes trying to edict strict rules pointless. Still, use your best, honest judgment. 
-
-Here are examples of what I consider acceptable uses of an LLM:
-- Getting acquainted with a new field, as a starting point for self-study
-- Generating simple scripts for basic tasks (like using bash to rename a large amount of files according to some non-trivial pattern, or tweaking the layout of a figure in matplotlib)
-- Improving a script/code you have written yourself
-- Improving the flow and clarity of an already structured text
-
-By contrast, I am cautious about the following use cases:
-- Turning a bullet list into a structured text, if it is intended for a piece of potentially published scientific writing (e.g. your thesis or a paper).
-- Generating critical code from scratch (a.k.a. vibe-coding your project)
-- Generating illustrating images
-- Using an LLM as the *sole* source for a detailed literature search
-
-In brief, **you should generate yourself, and possibly let the LLM edit.** In any case, **always be mindful and critical of the output and make sure you understand it**. I **will** ask you to explain specific parts of your code or your writing ! 
-
-Finally, keep in mind that feedback will help you improve only if it is your work you are showing. Thus, relying on an LLM would just deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. I have reviewed enough AI slop internship reports to attest of that. 
+## Large Language Models
+LLMs are transforming the way we do research. It's an exciting time. However, when it comes to writing, 
+**I urge you to use LLMs sparingly and never as a substitute for personal reflection**. Trying to edict strict rules would be pointless, but use your best, honest judgment. A good rule of thumb would be that *you generate, and you and possibly the LLM edit*. Feedback on your writing (from me or anyone else) will help you improve only if it is your work you are showing. Relying overly on an LLM would deprive yourself of an opportunity to improve crucial research skills, and generally waste your time and mine. 
 
 # How to apply
 With all that, if you feel like your profile, interests and expectations would fit with mine, you can contact me directly by <a href="mailto:florian&#46;blanc&#64;cnrs&#46;fr">e-mail</a> or apply to an [open position](/open-positions/). Include a description of your background, research interests, and career plans (no matter how vague). I look forward to it !
