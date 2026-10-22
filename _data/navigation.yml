@@ -18,6 +18,5 @@ main:
   #- title: "Gallery"
   #  url: /gallery/
 
-  # Rare Events: uncomment to launch
-  #- title: "Rare Events"
-  #  url: /rare-events/
+  - title: "Rare Events"
+    url: /rare-events/

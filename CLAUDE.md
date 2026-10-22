@@ -61,6 +61,6 @@ are bot-blocking; the fonts.googleapis/gstatic 404s are preconnect false positiv
   inline `$x$` → `$$x$$`, `#Tags` in the text → `tags:` (kept with `#`, case-sensitive; tag-only lines at the top
   removed, other tags left in the text). Layout `_layouts/post.html` (`kind: essay | book-notes`, `disclaimer`, book fields), URLs
   `/rare-events/:year/:title/`; preview drafts with `jekyll serve --drafts`. Index `_pages/rare-events.md`, tags
-  `_pages/rare-events-tags.md`; nav entry commented out until launch. Keep posts off professional pages.
+  `_pages/rare-events-tags.md`. Keep posts off professional pages.
   No RSS/Atom feed (jekyll-feed removed on purpose; do not re-add).
 - Navigation: `_data/navigation.yml`. Sidebar: `author:` block in `_config.yml`.
