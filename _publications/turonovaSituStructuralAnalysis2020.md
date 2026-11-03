@@ -11,6 +11,8 @@ authors: ["Beata Turoňová*", "Mateusz Sikora*", "Christoph Schürmann*", "Wim 
 summary: "<i>In situ</i> cryo-ET and molecular modelling reveal the hinges of the SARS-CoV-2 a few months into the pandemic."
 abstract: "The spike (S) protein of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is required for cell entry and is the major focus for vaccine development. Here, we combine cryo electron tomography, subtomogram averaging and molecular dynamics simulations to structurally analyze S in situ. Compared to recombinant S, the viral S was more heavily glycosylated and occurred mostly in the closed pre-fusion conformation. We show that the stalk domain of S contains three hinges, giving the head unexpected orientational freedom. We propose that the hinges allow S to scan the host cell surface, shielded from antibodies by an extensive glycan coat. The structure of native S contributes to our understanding of SARS-CoV-2 infection and the development of safe vaccines."
 image: ""
+video: ""
+video_credit: ""
 pdf: ""
 bibkey: "turonovaSituStructuralAnalysis2020"
 ---

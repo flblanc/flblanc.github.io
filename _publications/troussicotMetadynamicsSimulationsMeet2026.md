@@ -11,6 +11,8 @@ authors: ["Laura Troussicot", "<strong>Florian E. C. Blanc</strong>", "Yoann Pas
 summary: "In this drug design project, we combine funnel metadynamics, NMR and biochemical assays to improve an inhbitor of Human peroxiredoxin 5, a target enzyme for innovative treatments against strokes."
 abstract: "Abstract Using insights from funnel metadynamics, a molecular dynamics protocol that provides a detailed representation of protein--ligand interactions, we investigated how a single heavy-atom modification can enhance the activity of an initial hit against human peroxiredoxin 5. This improvement was validated by NMR experiments and enzyme-inhibition assays. Our results illustrate how molecular dynamics simulations offer a rational framework for designing ligands with improved properties, starting from low affinity but selective hits with minimal structural modifications."
 image: ""
+video: ""
+video_credit: ""
 pdf: ""
 bibkey: "troussicotMetadynamicsSimulationsMeet2026"
 ---

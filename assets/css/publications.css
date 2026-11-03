@@ -121,7 +121,8 @@
   display: block;
 }
 
-.publication-image img {
+.publication-image img,
+.publication-image video {
   display: block;
   width: 100%;
   height: auto;
@@ -129,6 +130,12 @@
   object-fit: contain;
   border: 1px solid #ddd;
   border-radius: 3px;
+}
+
+.publication-credit {
+  margin: 0.3em 0 0;
+  font-size: 0.7em;
+  color: #777;
 }
 
 /* Summary column: takes all remaining space */

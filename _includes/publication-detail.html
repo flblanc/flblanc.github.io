@@ -4,7 +4,8 @@
 <p>
   <a href="{{ page.paperurl }}">Publisher page</a>{% if page.pdf != "" %} | <a href="{{ page.pdf }}">PDF</a>{% endif %}
 </p>
-{% if page.image != "" %}<p><img src="{{ page.image }}" alt="{{ page.title }}" style="max-width: 100%;"></p>{% endif %}
+{% if page.video != "" %}<figure style="margin: 0 0 1em;"><video src="{{ page.video }}"{% if page.image != "" %} poster="{{ page.image }}"{% endif %} autoplay muted loop playsinline controls aria-label="{{ page.title }}" style="max-width: 100%;"></video>{% if page.video_credit != "" %}<figcaption>{{ page.video_credit }}</figcaption>{% endif %}</figure>
+{% elsif page.image != "" %}<p><img src="{{ page.image }}" alt="{{ page.title }}" style="max-width: 100%;"></p>{% endif %}
 {% if page.summary != "" %}{{ page.summary | markdownify }}{% endif %}
 {% if page.abstract != "" %}
 <h4>Abstract</h4>

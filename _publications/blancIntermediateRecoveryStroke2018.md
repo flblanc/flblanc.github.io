@@ -11,6 +11,8 @@ authors: ["<strong>Florian E. C. Blanc</strong>", "Tatiana Isabet", "Hannah Beni
 summary: "With crystallography, conventional MD and ABF, we characterise a structural state of the myosin motor domain that suggests a \"ratchet-like\" mechanism in which lever-arm repriming precedes active site closure and is not strongly coupled to it."
 abstract: ""
 image: ""
+video: ""
+video_credit: ""
 pdf: "/files/publications/blancIntermediateRecoveryStroke2018.pdf"
 bibkey: "blancIntermediateRecoveryStroke2018"
 ---

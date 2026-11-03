@@ -11,6 +11,8 @@ authors: ["Virginie Ropars*", "Zhaohui Yang*", "Tatiana Isabet*", "<strong>Flori
 summary: "Crystallography, single-molecule studies and implicit solvent simulations reveal how myosin X is optimised to walk fast on F-actin bundles."
 abstract: ""
 image: ""
+video: ""
+video_credit: ""
 pdf: "/files/publications/roparsMyosinMotorOptimized2016.pdf"
 bibkey: "roparsMyosinMotorOptimized2016"
 ---
