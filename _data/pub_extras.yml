@@ -38,6 +38,7 @@ blancWeakCouplingMechanism2024:
 oosterheertMolecularMechanismsInorganicphosphate2023:
   equal_contribution: 2
   summary: We combine cryo-EM, enhanced sampling MD simulations, machine learning, and *in vivo* and *in vitro* reconstitution to reveal the mechanisms and pathways for Pi release from F-actin, both from filament interior and barbed end.
+  video_credit: "Florian E.C. Blanc"
 planelles-herreroMyosinMyTH4FERMStructures2016:
   summary: Crystallography, binding affinity assays and MD simulations reveal "molecular tinkering" at play in the evolution of microtubule-binding domains in myosin tails.
 roparsMyosinMotorOptimized2016:
