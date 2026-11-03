@@ -30,9 +30,16 @@ trainee_legend: "Trainee under my supervision"
     </p>
   </div>
 
-  {% if post.image != "" or post.summary != "" %}
+  {% if post.image != "" or post.video != "" or post.summary != "" %}
   <div class="publication-body">
-    {% if post.image != "" %}
+    {% if post.video != "" %}
+    <div class="publication-image">
+      <a href="{{ post.permalink }}">
+        <video src="{{ post.video }}"{% if post.image != "" %} poster="{{ post.image }}"{% endif %} autoplay muted loop playsinline aria-label="{{ post.title }}"></video>
+      </a>
+      {% if post.video_credit != "" %}<p class="publication-credit">{{ post.video_credit }}</p>{% endif %}
+    </div>
+    {% elsif post.image != "" %}
     <div class="publication-image">
       <a href="{{ post.permalink }}">
         <img src="{{ post.image }}" alt="{{ post.title }}">

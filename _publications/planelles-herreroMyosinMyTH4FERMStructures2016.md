@@ -11,6 +11,8 @@ authors: ["Vicente José Planelles-Herrero", "<strong>Florian Blanc</strong>", "
 summary: "Crystallography, binding affinity assays and MD simulations reveal \"molecular tinkering\" at play in the evolution of microtubule-binding domains in myosin tails."
 abstract: ""
 image: ""
+video: ""
+video_credit: ""
 pdf: "/files/publications/planelles-herreroMyosinMyTH4FERMStructures2016.pdf"
 bibkey: "planelles-herreroMyosinMyTH4FERMStructures2016"
 ---

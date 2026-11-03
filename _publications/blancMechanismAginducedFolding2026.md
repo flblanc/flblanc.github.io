@@ -11,6 +11,8 @@ authors: ["<strong>Florian E. C. Blanc</strong> (corr.)", "Maggy Hologne", "Mari
 summary: "We use a custom bonded model and replica-exchange simulations to look at how Ag+ binding promotes the folding of an 11-residue peptide into an $\\alpha$-helix. We train an autoencoder neural network to map the folding landscape. There is even some NMR and Mass Spec in there."
 abstract: "Interactions between proteins and metal cations are central to biochemical processes and shape protein structures. SilE, an intrinsically disordered protein involved in bacterial silver resistance, folds into $\\alpha$-helices upon binding Ag+ ions. Focusing on the B1 peptide fragment from SilE, we investigate the mechanism of Ag+-induced folding with atomistic simulations and experiments. Guided by Mass Spectrometry and NMR, we prepare a structural model of Ag+-bound B1, which we parametrize using DFT. Then, with replica-exchange simulations and deep learning, we map B1's folding landscape and how it is shaped by Ag+. Specifically, Ag+ binding promotes folding by lowering the entropy of the disordered state and stabilizing the folded state. We also describe how Ag+ alters the folding pathways. Overall, we improve our understanding of metal-induced protein folding and lay the groundwork for further computational investigations of the bacterial silver-resistance machinery."
 image: "/images/publications/blancMechanismAginducedFolding2026.png"
+video: ""
+video_credit: ""
 pdf: "/files/publications/blancMechanismAginducedFolding2026.pdf"
 bibkey: "blancMechanismAg+InducedFolding2026"
 ---

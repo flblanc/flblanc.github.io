@@ -6,8 +6,9 @@
 Bibliographic metadata comes from the .bib file (auto-exported by Zotero /
 Better BibTeX). Everything Zotero does not hold (summary, equal-contribution,
 corresponding-author and trainee flags, URL overrides...) comes from
-_data/pub_extras.yml, keyed by citation key. Cover images and PDFs are picked
-up by filename (images/publications/<slug>.*, files/publications/<slug>.pdf).
+_data/pub_extras.yml, keyed by citation key. Cover images, movies and PDFs are
+picked up by filename (images/publications/<slug>.{png,jpg,gif,webp,svg} and
+<slug>.mp4, files/publications/<slug>.pdf); with a movie, the image is its poster.
 The generated pages are overwritten on every run: edit the extras, not them.
 """
 import argparse
@@ -138,8 +139,11 @@ def venue(e):
     return ""
 
 
-def find_asset(pattern):
-    hits = sorted(glob.glob(pattern))
+IMAGE_EXTS = {"png", "jpg", "jpeg", "gif", "webp", "svg"}
+
+
+def find_asset(pattern, exts=None):
+    hits = sorted(h for h in glob.glob(pattern) if not exts or h.rsplit(".", 1)[-1].lower() in exts)
     return "/" + hits[0] if hits else ""
 
 
@@ -158,7 +162,9 @@ def build(e, extras):
         "authors": extras.get("authors") or format_authors(e.get("author", ""), extras),
         "summary": extras.get("summary", ""),
         "abstract": unlatex(e.get("abstract", "")),
-        "image": find_asset(f"images/publications/{slug}.*"),
+        "image": find_asset(f"images/publications/{slug}.*", IMAGE_EXTS),
+        "video": find_asset(f"images/publications/{slug}.mp4"),
+        "video_credit": extras.get("video_credit", ""),
         "pdf": find_asset(f"files/publications/{slug}.pdf"),
         "bibkey": e["key"],
     }
