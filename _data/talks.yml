@@ -11,6 +11,12 @@
 #   host      who invited you (optional)
 #   authors   author line, e.g. for posters (optional; <u>name</u> underlines)
 # Text may use **bold**, *italic*, [link](url), <sup>, <sub> and <u>.
+- kind: invited
+  label: Invited speaker
+  title: Simulating how silver ions fold a peptide, and other molecular mechanisms
+  venue: Institut de Chimie de Lyon (ICL)
+  location: Lyon
+  date: November 2026
 
 - kind: invited
   label: Invited speaker
