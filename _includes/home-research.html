@@ -1,0 +1,93 @@
+{% comment %}
+  Research lines on the home page.
+  Content lives in _data/research.yml; styling in assets/css/home.css.
+
+  The first entry (weight: primary) gets the full-width treatment with a
+  figure; later entries (weight: secondary) are narrower and lighter, so the
+  motor line reads as primary while the silver-binding line stays a distinct,
+  named block rather than a footnote.
+
+  Key papers are rendered INSIDE the block they support (see home-papers.html),
+  deliberately not collected into a separate highlights section.
+
+  The two sub-cases of the motor line are rendered as a plain stacked list,
+  not a symmetric two-column grid, so they do not read as one question applied
+  to two interchangeable systems.
+{% endcomment %}
+
+{% for theme in site.data.research %}
+{% assign is_primary = false %}
+{% if theme.weight == "primary" %}{% assign is_primary = true %}{% endif %}
+
+<section class="home-section home-line home-line--{{ theme.weight | default: 'secondary' }}">
+
+  {% if theme.title and theme.title != "" %}
+  <h2 class="home-line-title">{{ theme.title }}</h2>
+  {% else %}
+  <h2 class="home-line-title home-line-title--empty">{{ theme.id | capitalize }}</h2>
+  {% endif %}
+
+  <div class="home-line-main">
+
+    {% comment %}
+      Both lines carry a figure; the visual weighting is done in CSS so the
+      secondary line stays a named block with its own image rather than a
+      footnote. A placeholder panel is shown only for the primary line, where
+      an empty slot would otherwise unbalance the layout.
+    {% endcomment %}
+      {% if theme.video and theme.video != "" %}
+      <div class="home-line-figure">
+        <video src="{{ theme.video | relative_url }}"
+               {% if theme.image and theme.image != "" %}poster="{{ theme.image | relative_url }}"{% endif %}
+               autoplay muted loop playsinline preload="metadata"
+               aria-label="{{ theme.alt | default: theme.title | escape }}"></video>
+      </div>
+      {% elsif theme.image and theme.image != "" %}
+      <div class="home-line-figure">
+        <img src="{{ theme.image | relative_url }}" alt="{{ theme.alt | escape }}" loading="lazy">
+      </div>
+      {% elsif is_primary %}
+      <div class="home-line-figure home-line-figure--placeholder" aria-hidden="true">
+        <span>Figure to come</span>
+      </div>
+      {% endif %}
+
+    <div class="home-line-body">
+
+      {% if theme.lead and theme.lead != "" %}
+      <div class="home-line-lead">{{ theme.lead | markdownify }}</div>
+      {% endif %}
+
+      {% if theme.cases and theme.cases != empty %}
+      <ul class="home-case-list">
+        {% for case in theme.cases %}
+          {% if case.title != "" or case.text != "" %}
+          <li class="home-case-item">
+            {% if case.title and case.title != "" %}
+            <span class="home-case-title">{{ case.title }}</span>
+            {% endif %}
+            {% if case.text and case.text != "" %}
+            <span class="home-case-text">{{ case.text | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+            {% endif %}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if theme.note and theme.note != "" %}
+      <p class="home-line-note">{{ theme.note | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      {% endif %}
+
+      {% if theme.papers and theme.papers != empty %}
+      {% include home-papers.html keys=theme.papers %}
+      {% endif %}
+
+      {% if theme.people and theme.people != "" %}
+      <p class="home-line-meta">{{ theme.people | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+{% endfor %}

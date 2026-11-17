@@ -1,0 +1,30 @@
+{% comment %}
+  Renders a compact list of key papers inside a research block.
+  Usage:  {% include home-papers.html keys=theme.papers %}
+  `keys` is a list of bibkeys matching the `bibkey` front-matter field of the
+  generated _publications/*.md files, so titles and venues never drift from
+  the bibliography.
+
+  Careful: the bibkey is the BibTeX key, which can differ from the file slug
+  (e.g. "blancMechanismAg+InducedFolding2026" vs the slug
+  "blancMechanismAginducedFolding2026"). An unknown key cannot render a link,
+  so it is reported as an HTML comment in the built page rather than being
+  dropped in silence — view source if a paper you expected is missing.
+{% endcomment %}
+
+{% if include.keys and include.keys != empty %}
+<ul class="home-paper-list">
+  {% for key in include.keys %}
+    {% assign pub = site.publications | where: "bibkey", key | first %}
+    {% if pub %}
+    <li class="home-paper-item">
+      <a class="home-paper-title" href="{{ pub.permalink | relative_url }}">{{ pub.title }}</a>
+      <span class="home-paper-venue"><em>{{ pub.venue }}</em>, {{ pub.date | date: "%Y" }}</span>
+    </li>
+    {% else %}
+    <!-- home-papers.html: no publication found with bibkey "{{ key }}" -
+         check it against the `bibkey:` field in _publications/*.md -->
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

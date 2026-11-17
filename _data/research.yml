@@ -1,0 +1,111 @@
+# Research lines shown on the home page, rendered by _includes/home-research.html.
+#
+# Order matters: the first entry is rendered as the PRIMARY block (full width,
+# figure, larger type), later entries as SECONDARY blocks (narrower, lighter).
+# This is what carries the "motor line is primary, silver-binding line is
+# clearly secondary but distinct" weighting from the content brief.
+#
+# Fields:
+#   id         internal handle, not displayed
+#   weight     primary | secondary  (drives the visual treatment)
+#   title      block heading
+#   lead       opening sentences of the block, Markdown allowed
+#   image      path under /images/... ; empty renders a placeholder panel
+#   video      short muted loop; takes precedence over image if both are set
+#   alt        alt text (required whenever image or video is set)
+#   papers     list of bibkeys from _publications/, displayed inside this block
+#   cases      optional sub-items, each with its own title + text
+#   note       optional closing line of the block (e.g. the open-question framing)
+#   people     optional credit line (trainees, collaborators, funded projects)
+
+# ---------------------------------------------------------------------------
+# PRIMARY LINE — molecular motors (brief messages 2, 3 and 4)
+# ---------------------------------------------------------------------------
+- id: motors
+  weight: primary
+
+  # TEXT: heading for the motor line.
+  title: ""
+
+  # TEXT (brief message 2 — track record): motors in a broad sense, spanning
+  # linear (myosin), rotary (ATP synthase) and synthetic (rotaxane) systems.
+  # The four papers below are displayed inside this block.
+  lead: ""
+
+  # Figure for the motor line. Both of these exist in the repo and belong to
+  # this line; pick one and delete the other, or point `video` at a loop.
+  #   /images/publications/blancMechanismProtonpoweredCring2024.png   (ATP synthase c-ring)
+  #   /images/publications/oosterheertMolecularMechanismsInorganicphosphate2023.png  (F-actin)
+  # There is also a ready-made F-actin loop at
+  #   /images/publications/oosterheertMolecularMechanismsInorganicphosphate2023.mp4
+  image: /images/publications/blancMechanismProtonpoweredCring2024.png
+  video: ""
+  # TEXT: alt text describing the figure.
+  alt: ""
+
+  papers:
+    - blancIntermediateRecoveryStroke2018          # PNAS 2018, myosin VI recovery stroke
+    - blancMechanismProtonpoweredCring2024         # PNAS 2024, ATP synthase c-ring
+    - oosterheertMolecularMechanismsInorganicphosphate2023  # NSMB 2023, F-actin
+    - blancWeakCouplingMechanism2024               # PLOS Comput Biol 2024, myosin (co-corresponding)
+    # NOTE: the rotaxane paper (blancAsymmetricMechanismSymmetric2021, JPCL 2021)
+    # is NOT listed in the brief's key papers, although "synthetic (rotaxane)"
+    # appears in the track-record sentence. Add it here if you want it shown.
+
+  # TEXT (brief message 3 — current question): how intrinsically disordered
+  # regions contribute to motor function.
+  # Each case below has its own functional verb and is deliberately NOT framed
+  # as the same question applied to two systems. Keep them distinct.
+  cases:
+      # TEXT: label for the myosin 18 case.
+    - title: ""
+      # TEXT: the disordered N-terminal extension in F-actin binding/assembly.
+      text: ""
+      # TEXT: label for the kinesin case.
+    - title: ""
+      # TEXT: kinesins carrying disordered extensions, and processive motility.
+      # Do not name a specific kinesin or describe a mechanism/hypothesis.
+      text: ""
+
+  # TEXT (brief message 4 — the gap): the role of disorder in motor function is
+  # understudied relative to structured domains.
+  # Word this carefully: do NOT claim it is "unexplored" in absolute terms.
+  note: ""
+
+  # TEXT: optional credit line. MyoAssemble may be named here, but only as a
+  # funded ANR project on which you are a scientific partner. Do not name
+  # DISOMOTOR or refer to any pending proposal.
+  people: ""
+
+# ---------------------------------------------------------------------------
+# SECONDARY LINE — silver-binding proteins (brief message 5)
+# ---------------------------------------------------------------------------
+- id: silver
+  weight: secondary
+
+  # TEXT: heading for the silver-binding line.
+  title: ""
+
+  # TEXT (brief message 5): work conducted WITHIN the ISA team's programme.
+  # Framing must be "contributes to / within the team's programme" — never
+  # claim ownership of this line. Mention the ongoing work on a silver-binding
+  # intrinsically disordered protein.
+  # TO CONFIRM by Florian: your specific contribution here, e.g. conformational
+  # ensembles of silver-binding peptides/IDPs, or Ag+ parametrization.
+  lead: ""
+
+  image: /images/publications/blancMechanismAginducedFolding2026.png
+  video: ""
+  # TEXT: alt text describing the figure.
+  alt: ""
+
+  papers:
+    # NOTE: this is the BibTeX key, which keeps the "+" and differs from the
+    # file slug (blancMechanismAginducedFolding2026). Keys here must match the
+    # `bibkey` field in _publications/*.md, not the permalink.
+    - "blancMechanismAg+InducedFolding2026"        # JPCL 2026, helix-coil transition
+
+  cases: []
+  note: ""
+  # TEXT: optional credit line (team programme, collaborators, trainees).
+  people: ""
