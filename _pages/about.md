@@ -6,57 +6,57 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+# Number of items in the news block; see _includes/home-news.html
+home_news_count: 4
 ---
 
-<!-- TEXT: affiliation line (current text kept below until replaced) -->
-I am a **CNRS Research Scientist** at the [Institut des Sciences Analytiques](https://www.isa-lyon.fr/), France, where I am part of the interdisciplinary [**Biophysics of Complex Systems**](https://nmrbiolchem.univ-lyon1.fr/) team. 
+<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 
-<!-- TEXT: research statement (current paragraphs kept below until replaced) -->
-In my research, I use computer simulations to study how molecules move and interact. This helps understand biological and chemical processes at the atomic scale.  
+{% comment %}
+  PAGE ORDER follows the content brief's message sequence:
+    1. Identity                      -> lead paragraph below
+    2. Track record  (motor line)    -> _data/research.yml, entry `motors`
+    3. Current question (disorder)   -> same entry, `cases`
+    4. The gap                       -> same entry, `note`
+    5. Silver-binding line           -> _data/research.yml, entry `silver`
+    6. Link between the two lines    -> connective line below
+    7. Close                         -> closing line below
+  Standing site furniture (recruitment note, news) follows after.
 
-My work sits at the intersection of **computational molecular biophysics**, **physical chemistry**, and **integrative structural biology**. 
-My goal is to understand how the fast, near-random motions of atoms and molecules give rise to function, whether in biological systems or complex chemical assemblies.
- 
-To do this, I combine:
- - **Molecular dynamics simulations** to model how molecules behave over time and predict their properties.
- - **Machine learning** to extract patterns from complex simulation data.
- - **Experimental biophysics**  to connect my simulations to real-world measurements, thanks to top-notch collaborators in NMR, Cryo-EM and X-ray crystallography. 
+  News items flagged `landing: false` in _data/news.yml are hidden here but
+  still shown on /news/, so the front page stays on-message.
 
-The systems I study range from short **peptides** to large **molecular machines** (myosin, ATP synthase), with the occasional venture into **supra-molecular chemistry**.  I’ve also worked on the SARS-CoV-2 spike protein in the early days of the Covid-19 pandemic, 
-helping to map its conformational dynamics and identify target sites for vaccines. 
-<!-- More recently, I started to explore how **deep learning** can help us integrate experiments with simulations.
--->
+  Key papers are rendered inside the research line they support, not in a
+  separate highlights block.
 
-<!-- AT-A-GLANCE BLOCK: renders as a shaded box once filled and uncommented.
-TEXT: optional heading
-TEXT: line 1 (e.g. funding/resources)
-TEXT: line 2 (e.g. supervision)
-TEXT: line 3 (optional)
-{: .notice}
-LINKS: /team/ and /cv/ anchors added once those pages exist
--->
+  OFF THIS PAGE by decision: SARS-CoV-2 work, ML/methods work, and one-off
+  collaborations (peroxiredoxin, TNAP, lignin). They remain on /publications/.
+  The previous version of this intro mentioned SARS-CoV-2 and machine
+  learning; that text is preserved in git history on `master` if needed.
+{% endcomment %}
 
-<!-- TEXT: recruitment note, 1-2 lines, linking /application-advice/ and /open-positions/ (current paragraph kept below until replaced) -->
+<!-- TEXT: affiliation line (kept verbatim from the previous version) -->
+I am a **CNRS Research Scientist** at the [Institut des Sciences Analytiques](https://www.isa-lyon.fr/), France, where I am part of the interdisciplinary [**Biophysics of Complex Systems**](https://nmrbiolchem.univ-lyon1.fr/) team.
+
+<!-- TEXT (brief message 1 — identity): you study how molecular motors work,
+     using molecular simulation to extract general functional principles.
+     Two or three sentences; this is the first thing a committee reads. -->
+
+<!-- Research lines: motor line (primary) then silver-binding line (secondary).
+     Content and key papers: _data/research.yml -->
+{% include home-research.html %}
+
+<!-- TEXT (brief message 6 — the link): both lines draw on your expertise in
+     disordered and flexible proteins, and this is where that expertise was
+     built. One or two sentences. -->
+
+<!-- TEXT (brief message 7 — close): simulation coupled with experimental
+     collaborators; CNRS, ISA Lyon. One or two sentences. -->
+
+<!-- TEXT: recruitment note, 1-2 lines, linking /application-advice/ and /open-positions/ (kept verbatim from the previous version) -->
 If you are a student curious about how molecules work at the atomic scale, and how we can use computers to understand this, I would love to hear from you.
 Read my [advice for applicants](/application-advice/) to get an idea of what I expect and how I like to work. If this looks like a fit, check out our [open positions](/open-positions/) or contact me directly at <a href="mailto:florian&#46;blanc&#64;cnrs&#46;fr">florian.blanc [at] cnrs [dot] fr</a> !
+{: .notice}
 
-
-## [News](/news/)
-
-<ul>
-{% for item in site.data.news limit:5 %}
-  <li>
-    <strong>{{ item.date }}</strong> —
-    {% if item.url %}
-      <a href="{{ item.url }}">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</a>
-    {% else %}
-      {{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}
-    {% endif %}
-  </li>
-{% endfor %}
-</ul>
-
-[See all news](/news/)
-
-
-
+<!-- Latest news, from _data/news.yml -->
+{% include home-news.html %}
