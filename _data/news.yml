@@ -1,3 +1,14 @@
+# News items, newest first. Shown in full on /news/ and, in part, on the home page.
+#
+# Fields:
+#   date     displayed as written (free text, so ranges like "March 24-26" work)
+#   text     Markdown allowed
+#   url      optional link target
+#   landing  set to false to keep an item OFF the home page while it still
+#            appears on /news/. Items without this field are shown everywhere.
+#            Used to keep the landing page on-message when an item concerns
+#            work that is deliberately not featured there.
+
 - date: "November 12, 2026"
   text: "Invited talk at Institut de Chimie de Lyon (ICL)."
 
@@ -7,13 +18,20 @@
 - date: "July 10, 2026"
   text: "New paper published in *ACS Omega*."
   url: /publication/troussicotMetadynamicsSimulationsMeet2026
+  landing: false   # peroxiredoxin: kept off the landing page by editorial decision
 
 - date: "May 4, 2026"
   text: "**Junghwan Ro** is starting his internship on lignin characterization by NMR and MD simulations, part of our collaboration with **Léa Vilcocq** and **Hugo Lilti** from IRCELYON."
+  landing: false   # lignin: kept off the landing page by editorial decision
 
 - date: "May 4, 2026"
   text: "Open position for a Master's thesis on enzyme simulations, starting date between September 2026 and March 2027."
   url: /open-positions/masters_TNAP_2026-2027
+  landing: false   # TNAP: kept off the landing page by editorial decision.
+                   # NOTE: this is the only recruitment item in the news feed, so
+                   # hiding it removes that signal from the front page. The
+                   # recruitment paragraph lower down still links /open-positions/.
+                   # Delete this flag if you would rather keep the position visible.
 
 - date: "April 27, 2026"
   text: "Student-engineers **Louison Grizard** and **Axel Lukaszewicz** from CPE Lyon are joining us for a short project on silver-binding peptides."
